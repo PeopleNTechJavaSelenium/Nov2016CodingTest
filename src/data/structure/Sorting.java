@@ -5,6 +5,6 @@ package data.structure;
  */
 public class Sorting {
     public static void main(String[] args) {
-        System.out.println("This is sorting algo");
+        System.out.println("This is sorting algohj");
     }
 }
