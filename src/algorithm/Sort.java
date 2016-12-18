@@ -5,6 +5,7 @@ public class Sort {
     long executionTime = 0;
 	/*
 	 * Please implement all the sorting algorithm. Feel free to add helping methods.
+	 * Store all the sorted data into one of the databases.
 	 */
 
 

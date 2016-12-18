@@ -1,5 +1,9 @@
 package databases;
 
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoDatabase;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,12 +13,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+
+
 /**
  * Created by mrahman on 12/18/16.
  */
 
 
 public class ConnectDB {
+
+    public static MongoDatabase mongoDatabase = null;
 
     Connection connect = null;
     Statement statement = null;
@@ -44,16 +52,16 @@ public class ConnectDB {
 
 
 
-    public Connection connectToDatabase2() throws IOException, SQLException, ClassNotFoundException {
-        Properties prop = loadProperties();
-        String driverClass = prop.getProperty("MYSQLJDBC.driver");
-        String url = prop.getProperty("MYSQLJDBC.url");
-        String userName = prop.getProperty("MYSQLJDBC.userName");
-        String password = prop.getProperty("MYSQLJDBC.password");
-        Class.forName(driverClass);
-        connect = DriverManager.getConnection(url,userName,password);
-        //  System.out.println("Database is connected");
-        return connect;
+    public static MongoDatabase connectMongoDB() {
+
+        String host = "localhost";
+        MongoClientURI mongoClientURI = new MongoClientURI(host);
+        MongoClient mongoClient = new MongoClient(mongoClientURI);
+        System.out.println("MongoDB Connection Eastablished");
+        mongoDatabase = mongoClient.getDatabase("database_name");
+        System.out.println("Database Connected");
+
+        return mongoDatabase;
     }
 
 
