@@ -2,12 +2,26 @@ Please answer the below core-java Questions:
 
 
 What jdk contains or composed of and define each components?
+A: It's the full featured Software Development Kit for Java, including JRE, and the compilers and tools (like JavaDoc, and Java Debugger) to create and compile programs.
+
 What is IDE?
+A:Integrated development environment
+
 What are the IDEs available in the market to support java?
+A:Eclipse. IntelliJ. NetBeans. NetBeans. JDeveloper. Oracle.DrJava
+
 Explain the entire java life cycle.
+A:editor,source code,java compiler, bytecodes,jvm,operating system.
+
 what is class?
+A:  A class is the blueprint from which individual objects are created.
+
 What is object?
+A:An object is a software bundle of variables and related methods.
+
 What is the entry point of an application?
+A:
+
 Why main is static?
 What is the difference between an Interface and Abstract class?
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
