@@ -1,6 +1,6 @@
 package design;
 
-public class EmployeeInfo{
+public class EmployeeInfo implements Employee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -58,5 +58,30 @@ public class EmployeeInfo{
 	public static int calculateEmployePension(){
 		int total=0;
 		return total;
+	}
+
+	@Override
+	public int employeeId() {
+		return 0;
+	}
+
+	@Override
+	public String employeeName() {
+		return null;
+	}
+
+	@Override
+	public void assignDepartment() {
+
+	}
+
+	@Override
+	public int calculateSalary() {
+		return 0;
+	}
+
+	@Override
+	public void benefitLayout() {
+
 	}
 }

@@ -1,0 +1,95 @@
+Please answer the below Data Structure Questions:
+
+
+why do we need data structure?
+
+A data structure is a way of organizing data that considers not only the items stored, but also their relationship to
+each other. Advance knowledge about the relationship between data items allows designing of efficient algorithms for
+the manipulation of data.
+
+List out the areas in which data structures are applied extensively?
+Compiler Design,
+Operating System,
+Database Management System,
+Statistical analysis package,
+Numerical Analysis,
+Graphics,
+Artificial Intelligence,
+Simulation
+
+what is an Array?
+An array is a special variable, which can hold more than one value at a time.
+
+what is the difference between the Array and ArrayList?
+
+Array Vs ArrayList In Java :
+
+
+An ArrayList is resizable, where as, an array is not. ArrayList is a part of the Collection Framework. We can
+store any type of objects, and we can deal with only objects. It is growable. Array is collection of similar
+data items. We can have array of primitives or objects. It is of fixed size. We can have multi dimensional arrays.
+Array can store primitive ArrayList: Stores object only. It fix size ArrayList: resizable. It can have multi dimensional
+Array lang ArrayList: Collection framework.
+
+Example http://www.geeksforgeeks.org/array-vs-arraylist-in-java/
+
+
+what is LinkedList?
+
+One disadvantage of using arrays to store data is that arrays are static structures and therefore cannot be easily
+extended or reduced to fit the data set. Arrays are also expensive to maintain new insertions and deletions. In this
+chapter we consider another data structure called Linked Lists that addresses some of the limitations of arrays.
+A linked list is a linear data structure where each element is a separate object. Each element (we will call it a node)
+of a list is comprising of two items - the data and a reference to the next node. The last node has a reference to null.
+The entry point into a linked list is called the head of the list. It should be noted that head is not a separate node,
+but the reference to the first node. If the list is empty then the head is a null reference. A linked list is a dynamic
+data structure. The number of nodes in a list is not fixed and can grow and shrink on demand. Any application which has
+to deal with an unknown number of objects will need to use a linked list.
+One disadvantage of a linked list against an array is that it does not allow direct access to the individual elements.
+If you want to access a particular item then you have to start at the head and follow the references until you get to
+that item. Another disadvantage is that a linked list uses more memory compare with an array - we extra 4 bytes
+(on 32-bit CPU) to store a reference to the next node.
+
+Types of Linked Lists
+A singly linked list is described above
+A doubly linked list is a list that has two references, one to the next node and another to previous node.
+Another important type of a linked list is called a circular linked list where last node of the list points back to the
+first node (or the head) of the list.
+
+what is queue?
+A collection designed for holding elements prior to processing. Besides basic Collection operations, queues provide
+additional insertion, extraction, and inspection operations. Queues typically, but do not necessarily, order elements
+in a FIFO (first-in-first-out) manner.
+what is stack?
+The Stack class implements a last-in-first-out (LIFO) stack of elements. We can think of a stack literally as a vertical
+stack of objects; when you add a new element, it gets stacked on top of the others. When we pull an element off the stack,
+ it comes off the top. In other words, the last element you added to the stack is the first one to come back off.
+
+what is FIFO and LIFO?
+FIFO-First In First Out
+LIFO-Last In First Out
+
+what is the order of complexity?
+
+what is the best case to search an element from an array?
+what is the worst case to search an element from an array?
+what is tree in data structure?
+what is graph in data structure?
+what is the difference between the HashTable and HashMap?
+What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+How HashMap works in java?
+What is ArrayIndexOutOfBoundsException in java? When it occurs?
+What are the different ways of copying an array into another array?
+What is difference between an array and a linked list?
+What is DFS and BFS?
+What is Recursion?
+What is Big-(O)-notation?
+Outlined different kind of sorting algorithm with time complexity?
+
+Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
+  a)In terms of Accessing element.
+  b)In terms of Inserting element.
+  c)In terms of Searching element.
+  d)In terms of Removing element.
+  =====ANSWERS====================
+

@@ -1,4 +1,8 @@
 package algorithm;
+import databases.ConnectDB;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /*
@@ -20,15 +24,43 @@ public class Numbers {
 		Random rand = new Random();
 		for(int i=0; i<num.length; i++){
 			
-		num[i] = rand.nextInt(1000000);
+		num[i] = rand.nextInt(10000);
 			
 		}
+		ConnectDB connectDB = new ConnectDB();
+
+		List<String> randomArray = new ArrayList<String>();
+		try {
+			connectDB.InsertDataFromArryToMySql(num, "random_array", "column_random_array");
+			randomArray = connectDB.readDataBase("random_array", "column_random_array");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Data is reading from the Table (random_array) and displaying to the console");
+		for(String st:randomArray){
+			System.out.println(st);
+		}
+/*
+		for(int j=0; j<num.length; j++){
+
+			//num[j] = rand.nextInt(10000);
+			System.out.println(num[j]);
+
+		}
+*/
 
 		//Selection Sort
 		Sort algo = new Sort();
 		algo.selectionSort(num);
 		long selectionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
+		System.out.println("========Sorted by Selection Sort :========");
+		/*for(int j=0; j<num.length; j++){
+			//num[j] = rand.nextInt(10000);
+			System.out.println(num[j]);
+		}
+		*/
 
 		//Insertion Sort
 		algo.insertionSort(num);

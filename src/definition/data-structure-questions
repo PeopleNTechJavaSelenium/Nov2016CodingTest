@@ -1,31 +1,159 @@
 Please answer the below Data Structure Questions:
 
+
 why do we need data structure?
+
+A data structure is a way of organizing data that considers not only the items stored, but also their relationship to
+each other. Advance knowledge about the relationship between data items allows designing of efficient algorithms for
+the manipulation of data.
+
 List out the areas in which data structures are applied extensively?
+Compiler Design,
+Operating System,
+Database Management System,
+Statistical analysis package,
+Numerical Analysis,
+Graphics,
+Artificial Intelligence,
+Simulation
+
 what is an Array?
+An array is a special variable, which can hold more than one value at a time.
+
 what is the difference between the Array and ArrayList?
+
+Array Vs ArrayList In Java :
+
+
+An ArrayList is resizable, where as, an array is not. ArrayList is a part of the Collection Framework. We can
+store any type of objects, and we can deal with only objects. It is growable. Array is collection of similar
+data items. We can have array of primitives or objects. It is of fixed size. We can have multi dimensional arrays.
+Array can store primitive ArrayList: Stores object only. It fix size ArrayList: resizable. It can have multi dimensional
+Array lang ArrayList: Collection framework.
+
+Example http://www.geeksforgeeks.org/array-vs-arraylist-in-java/
+
+
 what is LinkedList?
+
+One disadvantage of using arrays to store data is that arrays are static structures and therefore cannot be easily
+extended or reduced to fit the data set. Arrays are also expensive to maintain new insertions and deletions. In this
+chapter we consider another data structure called Linked Lists that addresses some of the limitations of arrays.
+A linked list is a linear data structure where each element is a separate object. Each element (we will call it a node)
+of a list is comprising of two items - the data and a reference to the next node. The last node has a reference to null.
+The entry point into a linked list is called the head of the list. It should be noted that head is not a separate node,
+but the reference to the first node. If the list is empty then the head is a null reference. A linked list is a dynamic
+data structure. The number of nodes in a list is not fixed and can grow and shrink on demand. Any application which has
+to deal with an unknown number of objects will need to use a linked list.
+One disadvantage of a linked list against an array is that it does not allow direct access to the individual elements.
+If you want to access a particular item then you have to start at the head and follow the references until you get to
+that item. Another disadvantage is that a linked list uses more memory compare with an array - we extra 4 bytes
+(on 32-bit CPU) to store a reference to the next node.
+
+Types of Linked Lists
+A singly linked list is described above
+A doubly linked list is a list that has two references, one to the next node and another to previous node.
+Another important type of a linked list is called a circular linked list where last node of the list points back to the
+first node (or the head) of the list.
+
 what is queue?
+A collection designed for holding elements prior to processing. Besides basic Collection operations, queues provide
+additional insertion, extraction, and inspection operations. Queues typically, but do not necessarily, order elements
+in a FIFO (first-in-first-out) manner.
 what is stack?
+The Stack class implements a last-in-first-out (LIFO) stack of elements. We can think of a stack literally as a vertical
+stack of objects; when you add a new element, it gets stacked on top of the others. When we pull an element off the stack,
+ it comes off the top. In other words, the last element you added to the stack is the first one to come back off.
+
 what is FIFO and LIFO?
+FIFO-First In First Out
+LIFO-Last In First Out
+
 what is the order of complexity?
+An intuitive definition could define the order of your program as the relation between the input size and the execution
+ time. Big-O analysis is a form of runtime analysis that measures the efficiency of an algorithm in terms of the time it
+  takes for the algorithm to run as a function of the input size.
+
 what is the best case to search an element from an array?
+In the best case analysis, we calculate lower bound on running time of an algorithm. We must know the case that causes
+minimum number of operations to be executed. In the linear search problem, the best case occurs when x is present at the
+ first location. The number of operations in the best case is constant (not dependent on n). So time complexity in the
+ best case would be Θ(1)
+
 what is the worst case to search an element from an array?
+In the worst case analysis, we calculate upper bound on running time of an algorithm. We must know the case that causes
+maximum number of operations to be executed. For Linear Search, the worst case happens when the element to be searched
+(x in the above code) is not present in the array. When x is not present, the search() functions compares it with all
+the elements of arr[] one by one. Therefore, the worst case time complexity of linear search would be Θ(n).
+
 what is tree in data structure?
+Tree represents the nodes connected by edges. We will discuss binary tree or binary search tree specifically.
+
+Binary Tree is a special datastructure used for data storage purposes. A binary tree has a special condition that each
+node can have a maximum of two children. A binary tree has the benefits of both an ordered array and a linked list as
+search is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.
+
 what is graph in data structure?
+A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a
+set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph.
+
 what is the difference between the HashTable and HashMap?
+1)Hashtable is synchronized whereas hashmap is not.
+2)Another difference is that iterator in the HashMap is fail-safe
+while the enumerator for the Hashtable isn't. If you change the map while iterating, you'll know.
+3)HashMap permits null values in it, while Hashtable doesn't.
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+RDBMS = Array (i.e. Array of structures)
+Network data model = Graph
+Hierarchical data model = Trees
 How HashMap works in java?
+When we pass Key and Value object to put() method on Java HashMap, HashMap implementation calls hashCode method on Key
+object and applies returned hashcode into its own hashing function to find a bucket location for storing Entry object,
+important point to mention is that HashMap in Java stores both key and value
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+ArrayIndexOutOfBoundsException extends IndexOutOfBoundsException. Thrown to indicate that an array has been accessed
+with an illegal index. The index is either negative or greater than or equal to the size of the array.
+
 What are the different ways of copying an array into another array?
+First way:  int[] a = new int[]{1,2,3,4,5};
+int[] b = a.clone();
+Second way: for(int i=0; i<5; i++){
+               B[i]=A[i]
+            }
+ Third Way: int[] src  = new int[]{1,2,3,4,5};
+            int[] dest = new int[5];
+
+            System.arraycopy( src, 0, dest, 0, src.length );
+
 What is difference between an array and a linked list?
+In array, each element is independent, no connection with previous element or with its location. In Linked list,
+location or address of elements is stored in the link part of previous element/node. In array, no pointers are used like
+ linked list so no need of extra space in memory for pointer
+
 What is DFS and BFS?
+For BFS in directed graphs, each edge of the graph either connects two vertices at the same level, goes down exactly one
+ level, or goes up any number of levels. For DFS, each edge either connects an ancestor to a descendant, a descendant to
+  an ancestor, or one node to a node in a previously visited subtree.
+
 What is Recursion?
+Recursion is a basic programming technique you can use in Java, in which a method calls itself to solve some problem. A
+method that uses this technique is recursive. Many programming problems can be solved only by recursion, and some
+problems that can be solved by other techniques are better solved by recursion.
+
 What is Big-(O)-notation?
+A beginner's guide to Big O notation. Big O notation is used in Computer Science to describe the performance or
+complexity of an algorithm. Big O specifically describes the worst-case scenario, and can be used to describe the
+execution time required or the space used (e.g. in memory or on disk) by an algorithm.
+
 Outlined different kind of sorting algorithm with time complexity?
+
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
+  =====ANSWERS====================
+
