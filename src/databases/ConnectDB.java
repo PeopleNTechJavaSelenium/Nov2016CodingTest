@@ -5,7 +5,6 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -190,7 +189,7 @@ public class ConnectDB {
 
 //
 
-    public void InsertDataFromArryListToMySql(List<Object> list,String tableName, String columnName)
+    public void InsertDataFromArryListToMySql(List<Integer> list, String tableName, String columnName)
     //InsertDataFromArryListToMySql
 
     //  public void InsertDataFromArryToMySql()
