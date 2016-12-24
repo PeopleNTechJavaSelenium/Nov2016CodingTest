@@ -36,6 +36,11 @@ public class Numbers {
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
 
 		//Continue for rest of the Sorting Algorithm....
+		//Merge Sort
+
+
+
+		// BubbleSort
 
 	}
 
