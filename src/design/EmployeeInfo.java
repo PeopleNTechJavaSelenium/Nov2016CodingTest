@@ -28,13 +28,17 @@ public class EmployeeInfo{
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
-	public EmployeeInfo(int employeeId){
+	public EmployeeInfo(){
 		
 	}
     public EmployeeInfo(String name, int employeeId){
 		
 	}
-	
+
+    public EmployeeInfo(String kairna_rashid) {
+
+    }
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.

@@ -1,28 +1,95 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+Ans: Programing way of storing data that can be use efficiently for an application.
+
 List out the areas in which data structures are applied extensively?
+Ans: For large/complex application. Ex. Facebook
+
 what is an Array?
+Ans: An array's size needs to be known/initialize ahead of time, or re-created when it needs to grow.
+
 what is the difference between the Array and ArrayList?
+Ans: Array must be initialize. ArrayList you don’t have to initialize so that it can go dynamically as you need and you don’t waste memory in ArrayList.
+ (if you don’t know the capacity of an application you would use ArrayList).
+
 what is LinkedList?
+Ans: LinkedList  its easier to store data of different sizes and its  easier for a linked list to grow organically.
+It can remove or add date from middle of the list very quickly.
+LinkedList doesn’t have to be in consecutive memory addresses.
+It could be anywhere in the memory as long as you know what is the next data is.
+
 what is queue?
+Ans: Queue is a collection for holding elements prior to processing.
+A queue is designed to have elements inserted at the end of the queue, and elements removed from the beginning of the queue.
+
 what is stack?
-what is FIFO and LIFO?
+Ans: A stack is a data structure that allows data to be inserted (a 'push' operation),
+and removed (a 'pop' operation) In stack the last data to be inserted will be the first data to be removed.(Last in First out)
+
+hat is FIFO and LIFO?
+Ans: First-in & First-out (FIFO)
+     Last-in & First-out (LIFO)
+
 what is the order of complexity?
+Ans: Order of complexity measures how many steps it takes to complete a problem in certain way in data structure
+
 what is the best case to search an element from an array?
+Ans:  The best case is when the case is present in the first location searched
+
 what is the worst case to search an element from an array?
+Ans: The worst case is when searched case is not present in the data set
+
 what is tree in data structure?
+Ans: A tree is a data structure consisting of nodes organized as a hierarchy
+
 what is graph in data structure?
+Ans:  A graph is an array comprised of a set of vertices and a set of edges
+
 what is the difference between the HashTable and HashMap?
+Ans: HashMap is non synchronized and not thread safe. On the other hand, HashTable is thread safe and synchronized.
+This makes HashMap better for non-threaded applications
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+Ans: RDBMS - Array,
+     Network data model - Graph
+     Hierarchical data model - Trees
+
 How HashMap works in java?
+Ans:  HashMap works on the principle of hashing
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+Ans: ArrayIndexOutOfBoundsException is an exception that causes the program crash.
+If we call an array index that is not created yet at that time ArrayIndexOutOfBoundsException happens.
+
 What are the different ways of copying an array into another array?
+Ans: Using addAll, int[] newArray= new int[oldArray1+oldArray2];
+
 What is difference between an array and a linked list?
+Ans: An array's size needs to be initialize ahead of time, or re-created when it needs to grow.
+ LinkedList  its easier to store data of different sizes and its  easier for a linked list to grow organically.
+
 What is DFS and BFS?
+Ans: DFS (Depth First Search) and BFS (Breadth First Search) are search algorithms used for graphs and trees.
+
 What is Recursion?
+Ans: Recursion is a basic programming technique, in which a method calls itself to solve some problem. A method that uses
+     this technique is recursive.
+
 What is Big-(O)-notation?
+Ans: Big O notation is used to describe the performance of an algorithm
+
 Outlined different kind of sorting algorithm with time complexity?
+Ans: Merged sort is better at dealing with large data compared to insertion sort
+    1)Quick sort
+    2)Insertion sort—it compare the # next to it(right)
+    	    - if the # is on the right is SMALLER its going to sort.
+            - the bigger # will move to the right and Smaller # will move to the LEFT
+    3)Selection sort
+    4)Merge sort—for large sets of data
+    5)Heap sort
+    6)Bucket sort
+    7)Bubble sort
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
