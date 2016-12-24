@@ -99,8 +99,8 @@
       <file leaf-file-name="ConnectDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/databases/ConnectDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4635193">
-              <caret line="202" column="32" selection-start-line="202" selection-start-column="32" selection-end-line="202" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.6137339">
+              <caret line="209" column="13" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
               <folding>
                 <marker date="1482604125000" expanded="true" signature="2125:2139" placeholder="select * fro... missingValue" />
                 <marker date="1482604125000" expanded="true" signature="3518:3572" placeholder="INSERT INTO missingValue... " />
@@ -1007,7 +1007,7 @@
       <workItem from="1482474324406" duration="23097000" />
       <workItem from="1482601517158" duration="868000" />
       <workItem from="1482604130201" duration="250000" />
-      <workItem from="1482612629388" duration="375000" />
+      <workItem from="1482612629388" duration="426000" />
     </task>
     <task id="LOCAL-00001" summary="almost done">
       <created>1482519305860</created>
@@ -1033,11 +1033,17 @@
       <option name="project" value="LOCAL" />
       <updated>1482612992735</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge branch 'Sachin' of https://github.com/PeopleNTechJavaSelenium/Nov2016CodingTest&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;CodingExamNov2016.iml&#10;#&#9;src/MySql.properties&#10;#&#9;src/algorithm/Numbers.java&#10;#&#9;src/algorithm/Sort.java&#10;#&#9;src/definition/core-java-conceptual-questions&#10;#&#9;src/definition/data-structure-questions&#10;#&#9;src/math/Factorial.java&#10;#&#9;src/math/FindMissingNumber.java&#10;#&#9;src/math/PrimeNumber.java&#10;#&#9;src/problems/DuplicateWord.java&#10;#&#9;src/problems/Permutation.java&#10;#&#9;src/reader/DataReader.java&#10;">
+      <created>1482613039242</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1482613039242</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57285000" />
+    <option name="totallyTimeSpent" value="57336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1098,7 +1104,8 @@
     <MESSAGE value="almost done" />
     <MESSAGE value="Project Submission" />
     <MESSAGE value="Merge branch 'master' of https://github.com/PeopleNTechJavaSelenium/Nov2016CodingTest&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;CodingExamNov2016.iml&#10;#&#9;src/MySql.properties&#10;#&#9;src/algorithm/Numbers.java&#10;#&#9;src/algorithm/Sort.java&#10;#&#9;src/definition/core-java-conceptual-questions&#10;#&#9;src/definition/data-structure-questions&#10;#&#9;src/math/Factorial.java&#10;#&#9;src/math/FindMissingNumber.java&#10;#&#9;src/math/PrimeNumber.java&#10;#&#9;src/problems/DuplicateWord.java&#10;#&#9;src/problems/Permutation.java&#10;#&#9;src/reader/DataReader.java&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/PeopleNTechJavaSelenium/Nov2016CodingTest&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;CodingExamNov2016.iml&#10;#&#9;src/MySql.properties&#10;#&#9;src/algorithm/Numbers.java&#10;#&#9;src/algorithm/Sort.java&#10;#&#9;src/definition/core-java-conceptual-questions&#10;#&#9;src/definition/data-structure-questions&#10;#&#9;src/math/Factorial.java&#10;#&#9;src/math/FindMissingNumber.java&#10;#&#9;src/math/PrimeNumber.java&#10;#&#9;src/problems/DuplicateWord.java&#10;#&#9;src/problems/Permutation.java&#10;#&#9;src/reader/DataReader.java&#10;" />
+    <MESSAGE value="Merge branch 'Sachin' of https://github.com/PeopleNTechJavaSelenium/Nov2016CodingTest&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;CodingExamNov2016.iml&#10;#&#9;src/MySql.properties&#10;#&#9;src/algorithm/Numbers.java&#10;#&#9;src/algorithm/Sort.java&#10;#&#9;src/definition/core-java-conceptual-questions&#10;#&#9;src/definition/data-structure-questions&#10;#&#9;src/math/Factorial.java&#10;#&#9;src/math/FindMissingNumber.java&#10;#&#9;src/math/PrimeNumber.java&#10;#&#9;src/problems/DuplicateWord.java&#10;#&#9;src/problems/Permutation.java&#10;#&#9;src/reader/DataReader.java&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'Sachin' of https://github.com/PeopleNTechJavaSelenium/Nov2016CodingTest&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;CodingExamNov2016.iml&#10;#&#9;src/MySql.properties&#10;#&#9;src/algorithm/Numbers.java&#10;#&#9;src/algorithm/Sort.java&#10;#&#9;src/definition/core-java-conceptual-questions&#10;#&#9;src/definition/data-structure-questions&#10;#&#9;src/math/Factorial.java&#10;#&#9;src/math/FindMissingNumber.java&#10;#&#9;src/math/PrimeNumber.java&#10;#&#9;src/problems/DuplicateWord.java&#10;#&#9;src/problems/Permutation.java&#10;#&#9;src/reader/DataReader.java&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1547,8 +1554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/databases/ConnectDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4635193">
-          <caret line="202" column="32" selection-start-line="202" selection-start-column="32" selection-end-line="202" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.6137339">
+          <caret line="209" column="13" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
           <folding>
             <marker date="1482604125000" expanded="true" signature="2125:2139" placeholder="select * fro... missingValue" />
             <marker date="1482604125000" expanded="true" signature="3518:3572" placeholder="INSERT INTO missingValue... " />
