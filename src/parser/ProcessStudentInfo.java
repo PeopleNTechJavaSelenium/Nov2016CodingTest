@@ -1,5 +1,6 @@
 package parser;
 
+import databases.ConnectDB;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -31,52 +32,55 @@ public class ProcessStudentInfo {
 		 */
 
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-				//Path of XML data to be read.
+		//Path of XML data to be read.
+		String pathSelenium = System.getProperty("user.dir") + "/src/parser/selenium.xml";
+		String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
+		String tag = "id";
 
-		String pathSelenium  = System.getProperty("user.dir") +"/src/parser/selenium.xml";
-				String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
-				String tag = "id";
+		//Declare a Map with List<String> into it.
+		List<String> map = new ArrayList<>();
 
-				//Declare a Map with List<String> into it.
+		/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
+		  Qtp student into another ArrayList. */
 
-				Map<String, List<Student>> map =new HashMap<>();
-				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
-				  Qtp student into another ArrayList. */
-				List<Student> SeleniumStudent = new ArrayList<>();
-				List<Student> QtpStudent = new ArrayList<>();
-				
-				
-				//Create XMLReader object.
-				XmlReader xmlreader = new XmlReader();
-				
-				//Parse Data using parseData method and then store data into Selenium ArrayList.
-				SeleniumStudent=(xmlreader.parseData("id", pathSelenium));
-				//System.out.println(SeleniumStudent);
+		List<Student> studentQTP = new ArrayList<Student>();
+		List<Student> studentSelenium = new ArrayList<Student>();
+		//Create XMLReader object.
 
-				//Parse Data using parseData method and then store data into Qtp ArrayList.
-				QtpStudent=(xmlreader.parseData("id", pathQtp));
-				
-				//add Selenium ArrayList data into map.
-				map.put("",SeleniumStudent);
+		XmlReader xmlreader = new XmlReader();
 
-				System.out.println("------------------------------------------------------------------------------------------------------");
-				for(Map.Entry<String, List<Student>> cursor:map.entrySet()) {
+		//Parse Data using parseData method and then store data into Selenium ArrayList.
+		studentSelenium=(xmlreader.parseData("id", pathSelenium));
 
-					System.out.println(cursor.getValue());
-				}
+		//Parse Data using parseData method and then store data into Qtp ArrayList.
+		studentQTP=(xmlreader.parseData("id", pathQtp));
 
-				System.out.println("------------------------------------------------------------------------------------------------------");
-				//add Qtp ArrayList data into map.
+		//add Selenium ArrayList data into map.
+		for (Student s:studentSelenium) {
+			map.add("Student (id= " + s.id + ") " + s.firstName + " " + s.lastName + " Grade= " + s.score);
+		}
 
+		//add Qtp ArrayList data into map.
+		for (Student s:studentQTP) {
+			map.add("Student (id= " + s.id + ") " + s.firstName + " " + s.lastName + " Grade= " + s.score);
+		}
+		//Retrieve map data and display output.
+		map.forEach(System.out::println);
+		String str = Arrays.toString(map.toArray());
+		System.out.print(map.size());
+		ConnectDB connectDB = new ConnectDB();
+		List<String> mapValue = new ArrayList<>();     //database: core_java
+		try {                                             //Table: map
+			connectDB.InsertDataFromStringToMySql(str,"map","studentdata"); //Column:studentdata
+			mapValue=connectDB.readDataBase("map", "studentdata");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-				map.put("",QtpStudent);
-				for(Map.Entry<String, List<Student>> cursor:map.entrySet()) {
-
-					System.out.println(cursor.getValue());
-				}
-				System.out.println("-------------------------------------------------------------------------------------------------------");
-
-
-			}
-
+		System.out.println("\nData is reading from the Table (Pattern) and displaying to the console");
+		for(String st:mapValue){
+			System.out.print(st);
+			System.out.print("  ");
+		}
+	}
 }
