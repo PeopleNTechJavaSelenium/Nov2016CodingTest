@@ -1,28 +1,92 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+    Ans: - Data Structure is the way the information is organized in the computer, and it is needed to read, update, and retrieve data from the database faster.
+
 List out the areas in which data structures are applied extensively?
+    Ans:
+
 what is an Array?
+    Ans: Array is a collection of variables of the same data type.
+
 what is the difference between the Array and ArrayList?
+    Ans: - Resizable - Array is static in size that is fixed length data structure. ArrayList is dynamic in size (as elements are added the capacity grows automatically; the instance variable capacity indicates the size.
+         - Primitives - ArrayList can not contains primitive data types (like int , float , double) it can only contains Object. Array can contain both primitive data types as well as objects.
+
 what is LinkedList?
+    Ans: - A data structure of nodes in which every previous node has reference to the next node.
+
 what is queue?
+    Ans: - A container of objects that are inserted and removed according to the first-in first-out (FIFO) principle.
+
 what is stack?
+    Ans: - A container of objects that are inserted and removed according to the last-in first-out (LIFO) principle.
+
 what is FIFO and LIFO?
+    Ans: - FIFO - First-In First-out
+         - LIFO - Last-In First-Out
+
 what is the order of complexity?
+    Ans: - The Big O Notation is Time complexity of an algorithm dictates how fast it will be algorithm will tale during execution based on the input size, and the Space complexity of an algorithm is total space taken by the algorithm with respect to the input size.
+
 what is the best case to search an element from an array?
+    Ans: - Searching the first element, which will take the least amount of time to execute.
+
 what is the worst case to search an element from an array?
+    Ans: - Searching the last element after going through all the other elements before it, which will consume the most time.
+
 what is tree in data structure?
+    Ans: - It is a non-linear data structure where each node may have zero or more children, which are referred to as the left child and
+
 what is graph in data structure?
+    Ans: - A set of items connected by edges called a vertex or node. A graph is a set of vertices and a binary relation between vertices, adjacency.
+
 what is the difference between the HashTable and HashMap?
+    Ans: - Synchronization or Thread Safe - HashMap is non synchronized and not thread safe, HashTable is thread safe and synchronized.
+         - Null keys & values - HashMap allows one null key and any number of null values, but HashTable do not allow null keys and null values in the HashTable object.
+         - Performance - HashMap is much faster and uses less memory than HashTable.
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+    Ans: - RDBMS - Array
+         - Network data model - Graph
+         - Hierarchical data model - Trees
+
 How HashMap works in java?
+    Ans: - It works on the principle of Hashing. First pass Key and Value object to put() method on Java HashMap, then HashMap implementation calls hashCode method on Key object and applies returned hashCode into its own hashing function to find a bucket location for storing entry object.
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+    Ans: - ArrayIndexOutOfBoundsException is runtime problem represented by a class, and it occurs when accessing an array element beyond the size of array (index).
+
 What are the different ways of copying an array into another array?
+    Ans: - System.arraycopy(): System class arraycopy() is the best way to do partial copy of an array.
+         - Object.clone(): Object class provides clone() method and since array in java is also an Object it can be used.
+         - Arrays.copyOf(): To copy first few elements of an array or full copy of array.
+         - Arrays.copyOfRange(): To copy few elements of an array where starting index is not 0; this method can be used to copy partial array.
+
 What is difference between an array and a linked list?
+    Ans: - Size - Array the size is fixed, and LinkedList size is not fixed.
+         - Insertion / Deletion - In Array the elements needs to be moved which makes it difficult, and LinkedList there is no need of movement of nodes which makes it easy.
+         - Memory - The elements are stored in consecutive memory locations, and in LinkedList the elements may or may not be stored in consecutive memory locations.
+
 What is DFS and BFS?
+    Ans: - DFS (Depth First Search) is search algorithms used for graphs and trees.
+         - BFS ( Breadth First Search) is search algorithms used for graphs and trees.
+
 What is Recursion?
+    Ans: - Simplified way of thinking about problems and methods for solving problems related to mathematical induction which calls itself.
+
 What is Big-(O)-notation?
+    Ans: - It describes the performance or complexity of an algorithm.
+         - Big O specifically describes the worst-case scenario, and can be used to describe the execution time required or the space (memory) used by an algorithm.
+
 Outlined different kind of sorting algorithm with time complexity?
+    Ans: - Bubble Sort [Best: O(n), Worst:O(N^2)]
+         - Selection Sort [Best/Worst: O(N^2)]
+         - Insertion Sort [Best: O(N), Worst:O(N^2)]
+         - Quicksort [Best: O(N lg N), Avg: O(N lg N), Worst:O(N^2)]
+         - Heapsort [Best/Avg/Worst: O(N lg N)]
+         - Counting sort [Best/Avg/Worst: O(N)]
+         - Radix sort [Best/Avg/Worst: O(N)]
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.

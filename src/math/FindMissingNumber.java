@@ -13,5 +13,33 @@ public class FindMissingNumber {
          */
          int [] array = new int[]{10, 2, 1, 4, 5, 3, 7, 8, 6};
 
+        //InsertionSort code is used first to display all the numbers in order.
+        for (int i=0; i<array.length; i++) {
+            int temp = array[i];
+            int j;
+            for (j=i-1; j>=0&&temp<array[j]; j--) {
+                array[j + 1] = array[j];
+            }
+            array[j + 1] = temp;
+        }
+
+        for (int i = 0; i<array.length; i++) {
+            System.out.println(array[i]);
+        }
+
+        //Missing number code.
+        int n =10;
+        int arrayTotal = 0;
+
+        for (int i = 0; i <array.length; i++){
+            n += i + 1;
+            arrayTotal += array[i];
+        }
+
+        int missingNumber = n - arrayTotal;
+        System.out.println("Missing number is : " + missingNumber);
+
+        }
+
+
     }
-}
