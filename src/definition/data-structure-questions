@@ -1,27 +1,81 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+To organize our data in a structured way that we can access later.
+
 List out the areas in which data structures are applied extensively?
+
+
 what is an Array?
+An array is a container object that holds a fixed number of values of a single type. The length of an array is
+established when the array is created. After creation, its length is fixed.
+
 what is the difference between the Array and ArrayList?
+Difference between array and arraylist in java include eight points namely Resizable, Performance, Traversal ,Primitives
+, Length , Type-Safety, Adding elements , Multi-dimensional.
+
 what is LinkedList?
+a linked list is a linear collection of data elements, called nodes, each pointing to the next node by means of a
+pointer. It is a data structure consisting of a group of nodes which together represent a sequence.
+
 what is queue?
+It represents an ordered list of objects just like a List , but its intended use is slightly different.
+A queue is designed to have elements inserted at the end of the queue, and elements removed from the beginning of the queue.
+
 what is stack?
+A stack is a data structure that allows data to be inserted (a 'push' operation), and removed (a 'pop' operation).
+Many stacks also support a read ahead (a 'peek' operation), which reads data without removing it.
+A stack is a LIFO-queue, meaning that the last data to be inserted will be the first data to be removed.
+
 what is FIFO and LIFO?
+First In First Out and Last In First Out.
+
 what is the order of complexity?
+Big O notation is that we are measuring the time and space complexity of an algorithm in terms of the growth of input size n.
+
 what is the best case to search an element from an array?
+O(n)
+
 what is the worst case to search an element from an array?
+O(n)
+
 what is tree in data structure?
+trees are made up of nodes. A common kind of tree is a binary tree, in which each node contains a reference to two
+other nodes (possibly null).
+
 what is graph in data structure?
+A graph is an object consisting of a vertex set and an edge set.
+
 what is the difference between the HashTable and HashMap?
+Hashtable is synchronized whereas hashmap is not. 2)Another difference is that iterator in the HashMap is fail-safe
+while the enumerator for the Hashtable isn't. If you change the map while iterating, you'll know.
+HashMap permits null values in it, while Hashtable doesn't.
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
 How HashMap works in java?
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+When you try to access an element of an array that doesn't exit. Example: access 11th element of an array that is 10
+elements long.
+
 What are the different ways of copying an array into another array?
+
+
 What is difference between an array and a linked list?
+In array, each element is independent, no connection with previous element or with its location. In Linked list,
+location or address of elements is stored in the link part of previous element/node. In array, no pointers are used
+like linked list so no need of extra space in memory for pointer.
+
 What is DFS and BFS?
+In array, each element is independent, no connection with previous element or with its location. In Linked list,
+location or address of elements is stored in the link part of previous element/node. In array, no pointers are used
+like linked list so no need of extra space in memory for pointer.
+
 What is Recursion?
+A method calling itself.
+
 What is Big-(O)-notation?
+A way to measure how long a certain sort takes to complete.
+
 Outlined different kind of sorting algorithm with time complexity?
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
