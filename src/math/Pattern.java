@@ -1,4 +1,6 @@
 package math;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pattern {
 
@@ -9,11 +11,31 @@ public class Pattern {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
-		
 
-		
-		
-		
+		List<Integer> list = new ArrayList<Integer>();
+		int i = 100;
+		while (i > 0) {
+			if (i > 90) {
+				i--;
+				list.add(i);
+			} else if (i > 70) {
+				i -= 2;
+				list.add(i);
+			} else if (i > 40) {
+				i -= 3;
+				list.add(i);
+			} else if (i > 0) {
+				i -= 4;
+				list.add(i);
+			}
+
+
+			for (int j : list
+					) {
+				System.out.println(j);
+
+			}
+		}
 
 	}
 }

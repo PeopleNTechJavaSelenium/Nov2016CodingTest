@@ -1,6 +1,7 @@
 package parser;
-
+import java.util.*;
 import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
@@ -36,27 +37,38 @@ public class ProcessStudentInfo {
 				String tag = "id";
 
 				//Declare a Map with List<String> into it.
-				
+				List<String> map = new ArrayList<>();
 				
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
-				
+				List<Student> qtpL = new ArrayList<>();
+				List<Student> SeleniumL = new ArrayList<>();
 				
 				
 				//Create XMLReader object.
+				XmlReader xl = new XmlReader();
 				
 				//Parse Data using parseData method and then store data into Selenium ArrayList.
 
+				SeleniumL = xl.parseData(tag, pathSelenium);
+
 				//Parse Data using parseData method and then store data into Qtp ArrayList.
-				
+				qtpL = xl.parseData(tag, pathQtp);
+
 				//add Selenium ArrayList data into map.
-			
+				for (Student ss: SeleniumL
+					 ) { map.add(ss.toString());
+
+				}
 				//add Qtp ArrayList data into map.
-		
+				for (Student ss: qtpL
+						) { map.add(ss.toString());
+
+				}
 		      	
 				//Retrieve map data and display output.
 
-				
+				map.forEach(System.out::println);
 			}
 
 }

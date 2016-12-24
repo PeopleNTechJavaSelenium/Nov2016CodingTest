@@ -1,5 +1,6 @@
 package problems;
 
+import java.util.*;
 /**
  * Created by mrahman on 4/9/16.
  */
@@ -11,7 +12,15 @@ public class DuplicateWord {
          * Also Find the average length of the words.
          */
 
-        String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
+        String st = "Java is a programming language . Java is also an Island of Indonesia. Java is widely used language";
+        List<String> list = Arrays.asList(st.split(" "));
+
+        Set<String> uniqueWords = new HashSet<String>(list);
+        for (String j : uniqueWords) {
+
+            System.out.println("[ "+j + " ]=> " + Collections.frequency(list, j));
+
+        }
 
     }
 

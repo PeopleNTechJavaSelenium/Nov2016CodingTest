@@ -190,7 +190,7 @@ public class ConnectDB {
 
 //
 
-    public void InsertDataFromArryListToMySql(List<Object> list,String tableName, String columnName)
+    public void InsertDataFromArryListToMySql(ArrayList<String> list, String tableName, String columnName)
     //InsertDataFromArryListToMySql
 
     //  public void InsertDataFromArryToMySql()

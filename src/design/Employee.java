@@ -1,5 +1,7 @@
 package design;
 
+import java.math.BigDecimal;
+
 public interface Employee {
 	
 	/*Employee is an Interface which contains multiple unimplemented methods.Again few methods
@@ -9,6 +11,7 @@ public interface Employee {
 	//and then implement these in a concrete class.
 	
 	//employeeId() will return employee id.
+
 	public int employeeId();
 	
 	//employeeName() will return employee name
@@ -18,7 +21,7 @@ public interface Employee {
     public void assignDepartment();
 	
 	//calculate employee salary
-	public int calculateSalary();
+	public double calculateSalary();
 	
 	//employee benefit
 	public void benefitLayout();

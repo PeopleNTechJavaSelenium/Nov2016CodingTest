@@ -1,5 +1,7 @@
 package design;
 
+import java.util.Scanner;
+
 public class CnnEmployee {
 
 	/**
@@ -13,9 +15,25 @@ public class CnnEmployee {
 	 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 	 *
 	 **/
+	Scanner sc= new Scanner(System.in);
 	public static void main(String[] args) {
 		
+	EmployeeInfo EN = new EmployeeInfo();
+	EN.employeeName();    	// get the name
+	//EN.setEmpName(");
+	EN.employeeId();// get ID
+	EN.setPosition("HR manager");
+	EN.assignDepartment();
+	EN.setCompanyName("Google");
+	EN.setAddress("VA...");
 
+	EN.yearsOFEmployment();	// GET yearEmp
+	EN.benefitLayout();		// prints benefit based on the year
+	EN.getPerformance();
+	EN.calculateSalary();
+	EN.calculateEmployeBonus();
+	EN.calculateEmployePension();
+	EN.StringPrint();		// print the Name and ID
 
 	}
 
