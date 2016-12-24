@@ -219,5 +219,35 @@ public class ConnectDB {
         }
         //connection = ConnectionConfiguration.getConnection();
     }
+    public void InsertDataFromArryListStringToMySql(List<String> list,String tableName, String columnName)
+    //InsertDataFromArryListToMySql
+
+    //  public void InsertDataFromArryToMySql()
+    {
+
+        try {
+            connectToDatabase();
+
+            //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
+
+            for(String st:list){
+                // System.out.println(st);
+
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+                ps.setObject(1,st);
+                ps.executeUpdate();
+                //System.out.println(list[n]);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //connection = ConnectionConfiguration.getConnection();
+    }
+
 
 }

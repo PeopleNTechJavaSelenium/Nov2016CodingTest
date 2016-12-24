@@ -1,6 +1,6 @@
 package design;
 
-public class EmployeeInfo{
+public class EmployeeInfo extends EmployeeDetails {
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -17,24 +17,36 @@ public class EmployeeInfo{
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
+	public int employeeID;
+	public final int salary =95000;
+	int bonus;
+
+
+
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
 	 * as you will come up with the new ideas.
 	 */
-	
+
 	/*
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
-	public EmployeeInfo(int employeeId){
-		
+	public EmployeeInfo(int employeeId) {
+		this.employeeID = employeeId;
+
+
 	}
-    public EmployeeInfo(String name, int employeeId){
-		
+
+	public EmployeeInfo(String compname, int employeeId) {
+		this.companyName = compname;
+		this.employeeID = employeeId;
+
+
 	}
-	
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -43,20 +55,69 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeBonus(){
-		int total=0;
+
+	public static int calculateEmployeBonus(int salary, int bonus) {
+		int total = 0;
+
+
+		if(bonus ==10)
+			total = (salary * bonus / 100)+ salary;
+
+		else if(bonus == 8)
+		total = (salary * bonus) /100 + salary;
+
+		else if (bonus == 5)
+			total = (salary * bonus /100) + salary;
+
+		else
+			System.out.println("The employee do not get any bonus");
+		System.out.println("The employee's Bonus is: " + total);
+
 		return total;
+
 	}
-	
+
+
 	/*
 	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
 	 * Then it will return the total pension. So you need to implement the logic.
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * So you probably need to send 2 arguments.
 	 * 
-	 */
-	public static int calculateEmployePension(){
-		int total=0;
+     */
+
+	public static int calculateEmployePension(int year, int salary, int bonus) {
+		int total = 0;
+
+		if(year ==1)
+			total = (salary * bonus/100) + salary;
+
+		else if(year == 2)
+			total = (salary * bonus /100) + salary;
+
+		else if(year == 5)
+			total = (salary * bonus /100) + salary;
+		else
+			System.out.println("The employee do not get any pension");
+
+		    System.out.println("The employee pension is: " + total);
+
 		return total;
 	}
-}
+
+
+
+	public void employeeStatus(String Exempt) {
+		if (Exempt == "Yes")
+			System.out.println("The employee is an Exempt");
+		else
+			System.out.println("The employee is a non-Exempt");
+
+
+	}
+
+
+
+
+	}
+
