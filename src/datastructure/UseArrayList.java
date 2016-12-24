@@ -1,5 +1,7 @@
 package datastructure;
 
+import databases.ConnectDB;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -14,7 +16,7 @@ public class UseArrayList {
 		 * Store all the sorted data into one of the databases.
 		 * 
 		 */
-
+		//ConnectDB connectDB = new ConnectDB();
 		List<String> list = new ArrayList<String>();
 		list.add("NY");
 		list.add("CA");

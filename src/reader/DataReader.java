@@ -1,7 +1,11 @@
+//String path1 = "/Users/ahmadkarim/Desktop/projects/Nov2016CodingTest-master/src/data/self-driving-car";
+	//	String path2 = "\\Users\\ahmadkarim\\Desktop\\projects\\Nov2016CodingTest-master\\src\\data\\self-driving-car";
+
 package reader;
 
+import databases.ConnectDB;
+
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -10,50 +14,47 @@ public class DataReader {
 	public static void main(String[] args) {
 		/*
 		 * User API to read the below textFile and print to console.
-		 * Use BufferedReader class. 
+		 * Use BufferedReader class.
 		 * Use try....catch block to handle Exception.
 		 *
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
-		 ***https://github.com/PeopleNTechJavaSelenium/NovCoreJavaClassProject2016/blob/master/src/reader/UserBufferdReader.java
+		 *
 		 */
 
-		//String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car";
 
-		FileReader fr = null;
-		BufferedReader br = null;
-		String path1 = "/Users/ahmadkarim/Desktop/projects/Nov2016CodingTest-master/src/data/self-driving-car";
-		String path2 = "\\Users\\ahmadkarim\\Desktop\\projects\\Nov2016CodingTest-master\\src\\data\\self-driving-car";
-		///Users/ahmadkarim/Desktop/projects/Nov2016CodingTest-master/src/data
+		ConnectDB connectDB = new ConnectDB();
 
-		try {
-			fr = new FileReader(path1);
-		} catch (FileNotFoundException e) {
-			//e.printStackTrace();
-			System.out.println("please fix the path");
-		}
-		br = new BufferedReader(fr);
-		String text = "";
-		try {
-			while((text = br.readLine())!=null){
-				System.out.println(text);
+		BufferedReader bufferedReader = null;
+		String data;
+		StringBuilder fileData = new StringBuilder();
+
+		try{
+			bufferedReader = new BufferedReader(new FileReader(textFile));
+			while ((data = bufferedReader.readLine()) != null){
+				System.out.println(data);
+				fileData.append(data).append("\n");
 			}
-		} catch (IOException e) {
+		}catch (IOException e){
+			e.printStackTrace();
+		}finally {
+			try {
+				if (bufferedReader != null) {
+					bufferedReader.close();
+				}
+			}catch(IOException ie){
+				ie.printStackTrace();
+			}
+		}
+
+		connectDB.InsertDataFromStringToMySql(fileData.toString(),"DataReader","String");
+
+		System.out.println("Text file exported to table: DataReader\n\nReading from DB:");
+		try {
+			System.out.println(connectDB.readDataBase("DataReader","String"));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		finally{
-
-			try{
-
-				if(br != null){
-					br = null;
-				}if(fr != null){
-					fr = null;
-				}
-			}catch(Exception ex){
-				ex.printStackTrace();
-			}
-		}
-
 	}
 
 }

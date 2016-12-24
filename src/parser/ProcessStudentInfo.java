@@ -1,9 +1,11 @@
 package parser;
 
+import databases.ConnectDB;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProcessStudentInfo {
@@ -29,34 +31,58 @@ public class ProcessStudentInfo {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and to retrieve data.
 		 *
 		 */
-			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-				//Path of XML data to be read.
-				String pathSelenium  = System.getProperty("user.dir") +"/src/parser/selenium.xml";
-				String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
-				String tag = "id";
+		public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 
-				//Declare a Map with List<String> into it.
-				
-				
+			ConnectDB connectDB = new ConnectDB();
+			//Path of XML data to be read.
+			String pathSelenium  = System.getProperty("user.dir") +"/src/parser/selenium.xml";
+			String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
+			String tag = "id";
+
+			//Declare a Map with List<String> into it.
+
+			List<String> map = new ArrayList<>();
+
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
-				
-				
-				
-				//Create XMLReader object.
-				
-				//Parse Data using parseData method and then store data into Selenium ArrayList.
 
-				//Parse Data using parseData method and then store data into Qtp ArrayList.
-				
-				//add Selenium ArrayList data into map.
-			
-				//add Qtp ArrayList data into map.
-		
-		      	
-				//Retrieve map data and display output.
+			List<Student> qtpList = new ArrayList<>();
+			List<Student> seleniumList = new ArrayList<>();
 
-				
+			//Create XMLReader object.
+
+			XmlReader xmlReader = new XmlReader();
+
+			//Parse Data using parseData method and then store data into Selenium ArrayList.
+			seleniumList = xmlReader.parseData(tag, pathSelenium);
+
+			//Parse Data using parseData method and then store data into Qtp ArrayList.
+			qtpList = xmlReader.parseData(tag, pathQtp);
+
+			//add Selenium ArrayList data into map.
+			for (Student st: seleniumList){
+				map.add(st.toString());
+				connectDB.InsertDataFromStringToMySqlFourCol("ParserSeleniumData",st.id,"StudentID",st.firstName,"StudentFName",st.lastName,"StudentLName",st.score,"StudentGrade");
 			}
+			//add Qtp ArrayList data into map.
+			for (Student st: qtpList){
+				map.add(st.toString());
+				connectDB.InsertDataFromStringToMySqlFourCol("ParserQTPData",st.id,"StudentID",st.firstName,"StudentFName",st.lastName,"StudentLName",st.score,"StudentGrade");
+			}
+
+
+			//Retrieve map data and display output.
+
+			map.forEach(System.out::println);
+
+			System.out.println("Read from DB");
+			try {
+				System.out.println("Reading First Name to verify only");
+				System.out.println(connectDB.readDataBase("ParserSeleniumData","StudentFName"));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
 
 }

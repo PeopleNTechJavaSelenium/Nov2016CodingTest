@@ -67,7 +67,75 @@ public class Numbers {
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
 
-		//Continue for rest of the Sorting Algorithm....
+		//Bubble Sort
+		algo.bubbleSort(num);
+		long bubbleSortExecutionTime = algo.executionTime;
+		try {
+			connectDB.InsertDataFromArryToMySql(algo.bubbleSort(num), "Sorting", "BubbleSort");
+			//lowestValue = connectDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
+
+		algo.mergeSort(num);
+		algo.printSortedArray(num);
+		long mergeSortExecutionTime = algo.executionTime;
+		try {
+			connectDB.InsertDataFromArryToMySql(algo.mergeSort(num), "Sorting", "Megersort");
+			//lowestValue = connectDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Total Execution Time of " + num.length + " numbers in Merge Sort take: " + mergeSortExecutionTime + " milli sec");
+
+		algo.quickSort(num);
+		long quickSortExecutionTime = algo.executionTime;
+		try {
+			connectDB.InsertDataFromArryToMySql(algo.quickSort(num), "Sorting", "QuickSort");
+			//lowestValue = connectDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort take: " + quickSortExecutionTime + " milli sec");
+
+		algo.heapSort(num);
+		long heapSortExecutionTime = algo.executionTime;
+		try {
+			connectDB.InsertDataFromArryToMySql(algo.heapSort(num), "Sorting", "HeapSort");
+			//lowestValue = connectDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Total Execution Time of " + num.length + " numbers in Heap Sort take: " + heapSortExecutionTime + " milli sec");
+
+		algo.bucketSort(num);
+		long bucketSortExecutionTime = algo.executionTime;
+		try {
+			connectDB.InsertDataFromArryToMySql(algo.bucketSort(num), "Sorting", "BucketSort");
+			//lowestValue = connectDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Total Execution Time of " + num.length + " numbers in Bucket Sort take: " + bucketSortExecutionTime + " milli sec");
+
+		algo.shellSort(num);
+		long shellSortExecutionTime = algo.executionTime;
+		try {
+			connectDB.InsertDataFromArryToMySql(algo.shellSort(num), "Sorting", "ShellSort");
+			//lowestValue = connectDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Total Execution Time of " + num.length + " numbers in Shel Sort take: " + shellSortExecutionTime + " milli sec");
+
+
 
 	}
 
