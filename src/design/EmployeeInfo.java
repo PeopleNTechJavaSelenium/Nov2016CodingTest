@@ -1,6 +1,6 @@
 package design;
 
-public class EmployeeInfo{
+public class EmployeeInfo extends ImplementEmployeeInterface{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -17,6 +17,8 @@ public class EmployeeInfo{
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
+	static String mS;
+	//private int a;
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -28,13 +30,20 @@ public class EmployeeInfo{
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
+	public EmployeeInfo(){};
 	public EmployeeInfo(int employeeId){
+		this.assignEmployeeId(employeeId);
 		
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+		this.assignEmployeeName(name);
+		this.assignEmployeeId(employeeId);
 	}
-	
+	public EmployeeInfo(String name, int employeeId, String department){
+		this.assignEmployeeName(name);
+		this.assignEmployeeId(employeeId);
+		this.assignDepartment(department);
+	}
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -43,10 +52,28 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeBonus(){
-		int total=0;
+	public static int calculateEmployeBonus(int salary,int performance){
+	int total=0;
+		switch(performance){
+			case 1:
+				total = (int)(salary * 0.10);
+				break;
+			case 2:
+				total = (int)(salary * 0.08);
+				break;
+			case 3:
+				total = (int)(salary * 0.06);
+				break;
+			case 4:
+				total = (int)(salary * 0.04);
+				break;
+			default:
+		}
+
+
 		return total;
 	}
+
 	
 	/*
 	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
@@ -55,8 +82,39 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployePension(){
+	public static int calculateEmployePension(int salary,int numberOfYears){
 		int total=0;
+
+		switch(numberOfYears) {
+			case 1:
+				total = (int) (salary * 0.05);
+				break;
+			case 2:
+				total = (int) (salary * 0.10);
+				break;
+			case 3:
+				total = (int) (salary * 0.15);
+				break;
+			case 4:
+				total = (int) (salary * 0.20);
+				break;
+			default:
+				break;
+		}
+
+
 		return total;
+	}
+
+
+	@Override
+	public int calculateYearlyEmployeeSalary(int salary) {
+		return salary*12;
+	}
+
+	@Override
+	public String maritalStatus(String mS) {
+		this.mS=mS;
+		return mS;
 	}
 }

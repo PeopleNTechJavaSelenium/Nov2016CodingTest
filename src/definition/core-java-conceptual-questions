@@ -2,32 +2,159 @@ Please answer the below core-java Questions:
 
 
 What jdk contains or composed of and define each components?
+Ans:
+The components of JKD are:
+Java Compiler: The Java compiler tool reads your source code written in java and converts it into bytecode(machine code)
+Java Interpreter: The Interpreter is used to interpret the bytecode file(.class) that have been compiled by Java compiler.
+Once the interpreter is accessed it starts the Java runtime environment loading the specified class(the .class file you are
+loading) and loading its main method.
+JVM: Consists of the loader bytecode verified and the execution engine. Loader loads the .class file and intializes the
+variables after which the bytecode verifier performs a series of checks to ensure the code isn't doing anything illegal.
+Lastly the execution engine executes the program and displays the output on the console.
+
+
 What is IDE?
+Ans:An integrated development environment (IDE) is a software suite that consolidates the basic tools developers
+need to write and test software. Typically, an IDE contains a code editor, a compiler or interpreter and a
+debugger that the developer accesses through a single graphical user interface (GUI). An IDE may be a standalone
+application, or it may be included as part of one or more existing and compatible applications.
+
 What are the IDEs available in the market to support java?
+
+Ans:Intellij,Eclipse,BlueJ,AndroidStudio,jEdit,jGrasp,jSource,jDeveloper
+
 Explain the entire java life cycle.
+Ans:
+When you write a program in a high-level language, you write your instructions—in the form of programming language
+statements—using a plain text editor. The document you produce at this stage is called source code. In Java, your
+source code is placed into a file with the extension .java.Once you've written your program, you compile it by using a
+software program called a compiler. The compiler turns your source code into the machine language for the Java Virtual
+Machine, and stores that code in a new document. The "generic" name for this file is object code, but the Java-specific
+form of object code is called bytecode. Once your compiler has successfully converted your source code into byte code,
+you can now call the loader. The loader is responsible for loading the class files. It will load the byte code,
+Link(memory allocation for byte code) and initialize variables to their default values.Before execution the bytecode
+verifier  performs a few checks before it “OKAYS”. The verifier checks that the instructions cannot perform actions
+that are damaging. The execution engine executes the bytecode much like a CPU executing machine code one by one.
+ At the end of execution it will provide your operating system with an output.
+
 what is class?
+Ans:A class is nothing but a blueprint or a template for creating different objects which defines its properties and
+behaviors.Java class objects exhibit the properties and behaviors defined by its class. A class can contain fields
+and methods to describe the behavior of an object.
+
 What is object?
+Ans:In object-oriented programming (OOP), objects are the things you think about first in designing a program and they
+are also the units of code that are eventually derived from the process. In between, each object is made into a generic
+class of object and even more generic classes are defined so that objects can share models and reuse the class
+definitions in their code. Each object is an instance of a particular class or subclass with the class's own methods
+or procedures and data variables. An object is what actually runs in the computer.
+
 What is the entry point of an application?
+Ans:It is the main method.In computer programming, an entry point is where control is transferred from the operating system
+to a computer program, at which place the processor enters a program or a code fragment and execution begins.
+
 Why main is static?
+Ans:This is neccesary because main() is called by the JVM before any objects are made. Since it is static it can be
+directly invoked via the class. Similarly, we use static sometime for user defined methods so that we need not to make
+objects. void indicates that the main() method being declared does not return a value.
+
 What is the difference between an Interface and Abstract class?
+Ans:1.Main difference is methods of a Java interface are implicitly abstract and cannot have implementations. A Java
+abstract class can have instance methods that implements a default behavior. 2.Variables declared in a Java interface
+is by default final. An abstract class may contain non-final variables.
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+Ans:You can not instantiate an abstract class or an interface - you can instantiate one of their subclasses/implementers.
+
 what is Access Specifier?
+Ans:The access to classes, constructors, methods and fields are regulated using access modifiers i.e.a class can control
+what information or data can be accessible by other classes. Available access modifiers in Java are: private, protected,
+default and public.
+
 What is OOP ? Define each feature of java OOP.
+Ans:
+Object-oriented programming (OOP) is a programming language model organized around objects rather than "actions" and data rather than logic. Features of OOP are as follows:
+—Encapsulation: Encapsulation means putting together all the variables (instance variables) and the methods into a single unit called Class. It also means hiding data and methods within an Object. Encapsulation provides the security that keeps data and methods safe from inadvertent changes.
+—Abstraction: Abstraction is a process of hiding the implementation details from the user, only the functionality will be provided to the user. In other words, the user will have the information on what the object does instead of how it does it.
+—Inheritance: It is the ability to create classes that share the attributes and methods of existing classes, but with more specific features. Inheritance is mainly used for code reusability.
+—Polymorphism: Its definition is that Poly means many and morphos means forms. It describes the feature of languages that allows the same word or symbol to be interpreted correctly in different situations based on the context.
+
+
 What is API? Name list of API that you have used so far.
+Ans:
+Application program interface (API) is a set of routines, protocols, and tools for building software applications.
+    An API specifies how software components should interact and APIs are used when programming graphical
+    user interface (GUI) components
+Scanner,BufferedReader,FileReader,Math,Date,List,Map.
+
 Does java support multiple inheritance?
+Ans:No
+
 What is method overloading and when it happens?
+Ans:
+When a class has more than one method with same name but with different arguments, then we call it as method overloading.
 What is method overriding and when it happens?
+Ans:
+When a super class method is modified in the sub class, then we call this as method overriding.
+
 Explain exceptions in java and how to handle it.
+Ans:
+ exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions.
+ Using Try catch statements we can handle exceptions. By trying the event if it fails then we throw an error.
 What is static keyword in java? How it has been used in variables and methods ?
+Ans:
+The static keyword in java is used for memory management mainly. We can apply java static keyword with variables, methods, blocks and nested class
+If you declare any variable as static, it is known static variable.
+
+The static variable can be used to refer the common property of all objects (that is not unique for each object) e.g. company name of employees,college name of students etc.
+The static variable gets memory only once in class area at the time of class loading.
+If you apply static keyword with any method, it is known as static method.
+
+A static method belongs to the class rather than object of a class.
+A static method can be invoked without the need for creating an instance of a class.
+static method can access static data member and can change the value of it.
+
 What is final and how it has been used variables and methods?
+Ans:
+Final in java is very important keyword and can be applied to class, method, and variables in Java.
+
+Any variable either member variable or local variable (declared inside method or block) modified by final keyword is called final variable. Final variables are often declare with static keyword in java and treated as constant
+Final keyword in java can also be applied to methods. A java method with final keyword is called final method and it can not be overridden in sub-class. You should make a method final in java if you think it’s complete and its behavior should remain constant in sub-classes. Final methods are faster than non-final methods because they are not required to be resolved during run-time and they are bonded on compile time.
+
+
+
 What is final, finally and finalize?
+Ans:
+Final class can't be inherited, final method can't be overridden and final variable value can't be changed. Finally is used to place important code, it will be executed whether exception is handled or not. Finalize is used to perform clean up processing just before object is garbage collected. 2) Final is a keyword.
+
 What is a constructor ?
+Ans:
+Constructor is a block of code that allows creation of an object of class. This can also be called creating an instance. Constructor looks like a method but it’s not, for example methods can have any return type or no return type (considered as void) but constructors don’t have any return type not even void.
+
 What is "this" keyword in java ?
+Ans:
+this is a keyword in Java. It can be used inside the Method or constructor of Class. It(this) works as a reference to the current Object whose Method or constructor is being invoked. The this keyword can be used to refer to any member of the current object from within an instance Method or a constructor
 What is "super" keyword in java?
+Ans:
+super is a keyword. It is used inside a sub-class method definition to call a method defined in the super class. Private methods of the super-class cannot be called. Only public and protected methods can be called by the super keyword. It is also used by class constructors to invoke constructors of its parent class.
 What is JVM stand for ?
+Ans:
+Java Virtual Machine
 What version of java are you using?
+Ans:
+1.8.0_111
 What is JAR stand for ?
+Ans:
+Java Archive
 What is compile time and run time?
+Ans:
+compile time is when the code is made in to machine code and run time is when the application is running
+
 What is heap?
+Ans:
+The heap is the runtime data area from which memory for all class instances and arrays is allocated. The heap is created on virtual machine start-up. Heap storage for objects is reclaimed by an automatic storage management system (known as a garbage collector); objects are never explicitly deallocated.
 How java manage it's memory?
+Ans:
+Garbage collection (GC) is a form of automatic memory management. The garbage collector, or just collector, attempts to reclaim garbage, or memory occupied by objects that are no longer in use by the program.
 What is the difference between String, StringBuffer and StringBuilder?
+StringBuffer andStringBuilder have the same methods with one difference and that's of synchronization. StringBuffer is synchronized( which means it is thread safe and hence you can use it when you implement threads for your methods) whereas StringBuilder is not synchronized( which implies it isn't thread safe)
