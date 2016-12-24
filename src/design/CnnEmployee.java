@@ -14,9 +14,17 @@ public class CnnEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
-		
 
-
+		EmployeeInfo empOne = new EmployeeInfo("Daisy OP", 34);
+		System.out.println("My Employee ID is "+empOne.employeeId() );
+		empOne.assignDepartment();
+		System.out.println("My department is.."+empOne.getDepartment() );
+		System.out.println( "My salary is  "+empOne.calculateSalary());
+		empOne.benefitLayout();
+		System.out.println(empOne.getBenefit());
+		EmployeeInfo person = new Janitor(40,"Micheal");
+		System.out.println("My Janitor Employee ID is  "+person.employeeId());
+		person.SaveEmployee();
 	}
 
 }

@@ -1,6 +1,7 @@
 package design;
+import databases.ConnectDB;
 
-public class EmployeeInfo{
+public class EmployeeInfo implements Employee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -17,7 +18,11 @@ public class EmployeeInfo{
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+	private String department;
+	private String benefit;
+	private String name;
+	private String address;
+	private int employeeID;
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -29,10 +34,11 @@ public class EmployeeInfo{
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeID= employeeId;
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+		this.name=name;
+		this.employeeID=employeeId;
 	}
 	
 	/*
@@ -43,9 +49,17 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeBonus(){
-		int total=0;
-		return total;
+	public static int calculateEmployeBonus(int salary, int performace){
+		switch (performace){
+			case 3:
+				return salary/10;
+			case 2:
+				return salary/8;
+			case 1:
+				return 0;
+			default:
+				return 0;
+		}
 	}
 	
 	/*
@@ -55,8 +69,64 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployePension(){
-		int total=0;
-		return total;
+	public static int calculateEmployePension(int salary,int year){
+		switch (year){
+			case 1:
+				return salary/5;
+			case 2:
+				return salary/10;
+			case 3:
+				return salary/15;
+			default:
+				return 0;
+		}
 	}
+
+	@Override
+	public int employeeId() {
+		return employeeID;
+	}
+
+	@Override
+	public String employeeName() {
+		return name;
+	}
+
+	@Override
+	public void assignDepartment() {
+		department="Math";
+	}
+
+	public String getDepartment(){
+		return department;
+
+	}
+
+	@Override
+	public int calculateSalary() {
+		return 100;
+	}
+
+	@Override
+	public void benefitLayout() {
+		benefit="i have a benefit layout";
+	}
+	public String getBenefit(){
+		return benefit;
+	}
+
+
+	public void SaveEmployee(){
+		ConnectDB connectDB = new ConnectDB();
+		try {
+			connectDB.InsertDataFromStringToMySql(this.name,"employeeInfo","employeeName");
+			//connectDB.InsertDataFromStringToMySql(this.department,"employeeInfo","employeeDepartment");
+			//connectDB.InsertDataFromStringToMySql(this.benefit,"employeeInfo","employeeBenefit");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
 }
