@@ -13,6 +13,45 @@ public class PrimeNumber {
 		 *
 		 */
 
+		int n=10000;
+		for (int i = 2; i < n; i++) {
+			if (checkPrime1(i)) {
+				System.out.print(i + ",");
+			}
+		}
+		System.out.println("");
+		for (int i = 0; i < n; i++) {
+			if (checkPrime(i)) {
+				System.out.print(i + ",");
+			}
+		}
+	}
+	public static boolean checkPrime(int n){
+
+		boolean[] isPrime = new boolean[n+1];
+		for (int i = 2; i <= n; i++) {
+			isPrime[i] = true;
+		}
+		//using Sieve of Eratosthenes
+		for (int factor = 2; factor*factor <= n; factor++) {
+			// if factor is prime, then mark multiples of factor as nonprime
+			// suffices to consider mutiples factor, factor+1, ...,  n/factor
+			if (isPrime[factor]) {
+				for (int j = factor; factor*j <= n; j++) {
+					isPrime[factor*j] = false;
+				}
+			}
+		}
+
+		return isPrime[n];
 	}
 
+
+	static boolean checkPrime1(int n) {
+		for(int i=2;i<n;i++) {
+			if(n%i==0)
+				return false;
+		}
+		return true;
+	}
 }
