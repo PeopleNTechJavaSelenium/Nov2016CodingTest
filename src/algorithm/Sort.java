@@ -34,8 +34,12 @@ public class Sort {
         final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
-
-
+        int temp, k;
+        for(int c=0; c<array.length; c++){
+            temp = array[c];
+            for ( k = c-1; k >=0 && temp<array[k]; k--) {
+                array[k + 1] = array[k];}
+            array[k+1] = temp;}
 
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
@@ -44,14 +48,21 @@ public class Sort {
     }
 
     public int[] bubbleSort(int [] array){
+        final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
-        
-        
-        
-        
-        
-        
+        for (int i = list.length; i >= 0; i--) {
+            for (int j = 0; j < list.length - 1; j++) {
+                if (list[j] > list[j + 1]) {
+                    int temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                }
+            }
+        }
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return list;
     }
     

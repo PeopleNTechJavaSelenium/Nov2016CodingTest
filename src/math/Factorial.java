@@ -12,5 +12,19 @@ public class Factorial {
          *
          */
 
+        System.out.println("Factorial of 5 using Recursion: "+ fact(5));
+
+        int givenNumber = 5;
+        for (int i = 1; i<5 ; i++) {
+            givenNumber = givenNumber *i;
+        }
+        System.out.println("Factorial of 5 using Iteration: "+ givenNumber);
+    }
+    public static long fact(long x) {
+        if (x<=1)
+            return 1;
+        else
+            return x *(fact(x-1)) ;
+
     }
 }

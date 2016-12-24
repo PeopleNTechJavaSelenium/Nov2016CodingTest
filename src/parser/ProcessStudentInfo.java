@@ -4,7 +4,7 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
 
 public class ProcessStudentInfo {
 
@@ -31,32 +31,56 @@ public class ProcessStudentInfo {
 		 */
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 				//Path of XML data to be read.
-				String pathSelenium  = System.getProperty("user.dir") +"/src/parser/selenium.xml";
-				String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
+				String pathSelenium  = "C:\\Users\\Zahid\\IdeaProjects\\Nov2016CodingTest\\src\\parser\\selenium.xml";
+				String pathQtp = "C:\\Users\\Zahid\\IdeaProjects\\Nov2016CodingTest\\src\\parser\\qtp.xml";
 				String tag = "id";
 
 				//Declare a Map with List<String> into it.
+
+				Map<String, List<Student>> studentinfo = new HashMap<>();
 				
 				
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
+
+				List<Student> SeleniumStudent = new ArrayList<>();
+				List<Student> QtpStudent = new ArrayList<>();
 				
 				
 				
 				//Create XMLReader object.
+				XmlReader xmlreader = new XmlReader();
 				
 				//Parse Data using parseData method and then store data into Selenium ArrayList.
+				SeleniumStudent = xmlreader.parseData(tag,pathSelenium);
 
 				//Parse Data using parseData method and then store data into Qtp ArrayList.
+				QtpStudent = xmlreader.parseData(tag,pathQtp);
 				
 				//add Selenium ArrayList data into map.
+				studentinfo.put(" ",SeleniumStudent);
 			
 				//add Qtp ArrayList data into map.
+				studentinfo.put(" ",QtpStudent);
+				System.out.println("................................................................");
 		
 		      	
 				//Retrieve map data and display output.
+				Iterator it = studentinfo.entrySet().iterator();
 
-				
+				while(it.hasNext()){
+					System.out.println(it.next());
+				}
+
+				for(Map.Entry<String, List<Student>> cursor:studentinfo.entrySet()) {
+
+					System.out.print((cursor.getKey()+"   "+cursor.getValue()+"  "+ "grade:")+"\n");
+				}
+				System.out.println("................................................................");
+
+
+
+
 			}
 
 }
