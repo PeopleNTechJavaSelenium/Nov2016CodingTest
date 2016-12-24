@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b419ff9a-928a-4961-9e57-52b172dd0e81" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b419ff9a-928a-4961-9e57-52b172dd0e81" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1009,7 +1007,7 @@
       <workItem from="1482474324406" duration="23097000" />
       <workItem from="1482601517158" duration="868000" />
       <workItem from="1482604130201" duration="250000" />
-      <workItem from="1482612629388" duration="332000" />
+      <workItem from="1482612629388" duration="375000" />
     </task>
     <task id="LOCAL-00001" summary="almost done">
       <created>1482519305860</created>
@@ -1029,11 +1027,17 @@
       <option name="project" value="LOCAL" />
       <updated>1482612940128</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge branch 'master' of https://github.com/PeopleNTechJavaSelenium/Nov2016CodingTest&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;CodingExamNov2016.iml&#10;#&#9;src/MySql.properties&#10;#&#9;src/algorithm/Numbers.java&#10;#&#9;src/algorithm/Sort.java&#10;#&#9;src/definition/core-java-conceptual-questions&#10;#&#9;src/definition/data-structure-questions&#10;#&#9;src/math/Factorial.java&#10;#&#9;src/math/FindMissingNumber.java&#10;#&#9;src/math/PrimeNumber.java&#10;#&#9;src/problems/DuplicateWord.java&#10;#&#9;src/problems/Permutation.java&#10;#&#9;src/reader/DataReader.java&#10;">
+      <created>1482612992735</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1482612992735</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57242000" />
+    <option name="totallyTimeSpent" value="57285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
