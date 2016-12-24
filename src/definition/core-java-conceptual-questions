@@ -2,32 +2,192 @@ Please answer the below core-java Questions:
 
 
 What jdk contains or composed of and define each components?
+ans :
+    JDK stands for java development kit.it contains the following
+      	1. java compiler: which is used to compile the java files
+      	2. java interpreter: interprets the java files that are compiled
+      	3. java disaddembler: use to disassemble the java class file
+      	4. java header file generator: used to generate the c language header files and source files to implement the native methods
+      	5. java documentation: required for maintain code easily
+      	6. java debugger: debugs the java files
+      	7. java applet viewer: used to view java applets which are graphical applications designed in java
+
 What is IDE?
+ans :
+    An integrated development environment (IDE) is a software suite that consolidates the basic tools developers need to write and test software. Typically, an IDE contains a code editor, a compiler or interpreter and a debugger that the developer accesses through a single graphical user interface (GUI). An IDE may be a standalone application, or it may be included as part of one or more existing and compatible applications.
+
+
 What are the IDEs available in the market to support java?
+ans :
+    Following are some IDE are:
+    1) Eclipse
+    2) IntelliJ
+    3) NetBeans
+    4) JDeveloper
+    5) DrJava
 Explain the entire java life cycle.
+ans :
+    -Code Editor: is where code is written and a source file is created.
+    -Java Compiler: is the component of Java that converts the source file into .class or Bytecode file.
+    -Java Virtual Machine:
+    ——Class Loader: is used to load the .class file.
+    ——Bytecode verifier: The verifier checks that the instructions cannot perform actions that are obviously damaging.
+     All classes except for system classes are verified
+    ——Interpreter: A module that alternately decodes and executes every statement in some body of code.
+     The Java interpreter decodes and executes bytecode for the Java virtual machine.
+    -Operating System: is the host machine where interpreted code is run.
+
+
 what is class?
+ans :
+    A class is nothing but a blueprint or a template for creating different objects which defines its properties and behaviours.
+    Java class objects exhibit the properties and behaviours defined by its class. A class can contain fields and methods to describe the behaviour of an object.
+
 What is object?
+ans :
+    An object is an instance of a class and have states and behaviours.
+
 What is the entry point of an application?
+ans :
+    Entry point of an application is the first method or function or line of code it would run.
+    For a Java application that would be considered as the main method.
+
 Why main is static?
+ans :
+    The main() method in C++, C# and Java are static because they can then be invoked by the runtime engine
+    without having to instantiate an instance of the parent class.
+
 What is the difference between an Interface and Abstract class?
+ans :
+    An interface differs from an abstract class because an interface is not a class.
+    An interface is essentially a type that can be satisfied by any class that implements the interface.
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+ans :
+    Objects cannot be made from Interface or Abstract classes and any class that implements an interface must satisfy 2 conditions:
+    It must have the phrase "implements Interface_Name" at the beginning of the class definition
+    and it must also implement all of the method headings listed in the interface definition.
+
 what is Access Specifier?
+ans :
+    The access to classes, constructors, methods and fields are regulated using access modifiers i.e.
+    a class can control what information or data can be accessible by other classes.
+    Available access modifiers in Java are: private, protected, default and public.
+
+
 What is OOP ? Define each feature of java OOP.
+ans :
+    Object-oriented programming (OOP) is a programming language model organized around objects rather than "actions"
+    and data rather than logic. Features of OOP are as follows:
+    —Encapsulation: Encapsulation means putting together all the variables (instance variables)
+    and the methods into a single unit called Class. It also means hiding data and methods within an Object.
+    Encapsulation provides the security that keeps data and methods safe from inadvertent changes.
+
+    —Abstraction: Abstraction is a process of hiding the implementation details from the user,
+    only the functionality will be provided to the user. In other words, the user will have the
+    information on what the object does instead of how it does it.
+
+    —Inheritance: It is the ability to create classes that share the attributes and methods of existing classes,
+    but with more specific features. Inheritance is mainly used for code reusability.
+    —Polymorphism: Its definition is that Poly means many and morphos means forms.
+    It describes the feature of languages that allows the same word or symbol to be interpreted
+    correctly in different situations based on the context.
+
+
 What is API? Name list of API that you have used so far.
+ans :
+    Application program interface (API) is a set of routines, protocols, and tools for building software applications.
+    An API specifies how software components should interact and APIs are used when programming graphical
+    user interface (GUI) components
+    1) Scanner 2) Random 3) BufferedReader 5) JFrame 6) JLabel 7) JPanel 8) JTextField 9) JButton 10) 11)Math
+
 Does java support multiple inheritance?
+ans :
+    No
+
 What is method overloading and when it happens?
+ans :
+    Method Overloading is a feature that allows a class to have two or more methods having same name, if their argument lists are different.
+
 What is method overriding and when it happens?
+ans :
+    Declaring a method in subclass which is already present in parent class is known as method overriding.
+    If a class inherits a method from its superclass, then there is a chance to override the method provided that it is not marked final.
+
+
 Explain exceptions in java and how to handle it.
+ans :
+    An exception (or exceptional event) is a problem that arises during the execution of a program.
+    When an Exception occurs the normal flow of the program is disrupted and the program/Application terminates abnormally,
+    which is not recommended, therefore, these exceptions are to be handled. Exceptions can be handled by using try, catch blocks.
+
 What is static keyword in java? How it has been used in variables and methods ?
+ans :
+    The static keyword in java is used for memory management mainly.
+    We can apply java static keyword with variables, methods, blocks and nested class.
+    The static keyword belongs to the class than instance of the class. The static can be a variable, method, block or nested class.
+
 What is final and how it has been used variables and methods?
+ans :
+    The final keyword in java is used to restrict the user and if a variable is final, its value cannot change. e.g:
+    final int a = 10;
+    final void a()
+
 What is final, finally and finalize?
+ans :
+    —Final: is a keyword and is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed.
+    —Finally: is a block and is used to place important code, it will be executed whether exception is handled or not.
+    Finalize: s a method and is used to perform clean up processing just before object is garbage collected.
+
+
 What is a constructor ?
+ans :
+    Constructor in java is a special type of method that is used to initialize the object.
+    Java constructor is invoked at the time of object creation.
+    It constructs the values i.e. provides data for the object that is why it is known as constructor.
+
 What is "this" keyword in java ?
+ans :
+    this  is a keyword in Java. It can be used inside the Method or constructor of  Class.
+    It(this) works as a reference to the current Object whose Method or constructor is being invoked.
+    The this keyword can be used to refer to any member of the current object from within an instance Method or a constructor.
+
+
 What is "super" keyword in java?
+ans :
+    The super keyword in java is a reference variable that is used to refer immediate parent class object.
+
 What is JVM stand for ?
+ans :
+    JVM stands for Java Virtual Machine
+
 What version of java are you using?
+ans :
+    Java(TM) SE Runtime Environment (build 1.8.0_111-b14)
+
 What is JAR stand for ?
+ans :
+    A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (text, images, etc.) into one file to distribute application software or libraries on the Java platform.
+
 What is compile time and run time?
+ans :
+    Compile time is the time used to convert the program to machine code.
+    Runtime is the time required for it to load in the memory and run it.
+
 What is heap?
+ans :
+    The heap is the runtime data area from which memory for all class instances and arrays is allocated.
+    The heap is created on virtual machine start-up. Heap storage for objects is reclaimed by an automatic storage management system.
+
 How java manage it's memory?
+ans :
+    Java manages its memory using the Memory Management System and has three parts:
+    -Code Segment
+    -Stack
+    -Heap
+
 What is the difference between String, StringBuffer and StringBuilder?
+ans :
+    String is a type of variable used to store characters.
+    The StringBuffer and StringBuilder classes are used when there is a necessity to make a lot of modifications to Strings of characters. Unlike Strings, objects of type StringBuffer and String builder can be modified over and over again without leaving behind a lot of new unused objects. The StringBuilder class was introduced as of Java 5 and the main difference between the StringBuffer and StringBuilder is that StringBuilders methods are not thread safe (not synchronized).
+
