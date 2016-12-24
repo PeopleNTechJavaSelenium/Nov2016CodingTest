@@ -1,42 +1,51 @@
 package algorithm;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 /*
  *Created by PIIT_NYA on 12/11/2016.
  */
-public class Numbers {
+public class Numbers
+    {
 
 	/*
-	 * Show all the different kind of sorting algorithm by applying into (num array).
+     * Show all the different kind of sorting algorithm by applying into (num array).
 	 * Display the execution time for each sorting.Example in below.
 	 *
 	 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 	 */
 
-	public static void main(String[] args) {
-		
-		int [] num = new int[10000];
-		
-		Random rand = new Random();
-		for(int i=0; i<num.length; i++){
-			
-		num[i] = rand.nextInt(1000000);
-			
-		}
+        public static void main(String[] args)
+            {
 
-		//Selection Sort
-		Sort algo = new Sort();
-		algo.selectionSort(num);
-		long selectionSortExecutionTime = algo.executionTime;
-		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
+                int[] num = new int[10000];
+                 Random rand = new Random();
+                for (int i = 0; i < num.length; i++)
+                    {
 
-		//Insertion Sort
-		algo.insertionSort(num);
-		long insertionSortExecutionTime = algo.executionTime;
-		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
+                        num[i] = rand.nextInt(1000000);
 
-		//Continue for rest of the Sorting Algorithm....
+                    }
 
-	}
+                //Selection Sort
+                Sort algo = new Sort();
+                algo.selectionSort(num);
+                long selectionSortExecutionTime = algo.executionTime;
+                System.out.println("Total Execution Time of " + num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
 
-}
+                //Insertion Sort
+                algo.insertionSort(num);
+                long insertionSortExecutionTime = algo.executionTime;
+                System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
+
+                algo.bubbleSort(num);
+                long bubbleSortExecutionTime = algo.executionTime;
+                System.out.println("Total Execution Time of " + num.length + " numbers in bubbleSort take: " + bubbleSortExecutionTime + " milli sec");
+
+
+                //Continue for rest of the Sorting Algorithm....
+
+            }
+
+    }

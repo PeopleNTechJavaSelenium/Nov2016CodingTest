@@ -20,28 +20,71 @@ What is object?
 A:An object is a software bundle of variables and related methods.
 
 What is the entry point of an application?
-A:
+A: public void static main
 
 Why main is static?
+a called by the JVM before any objects are made.Since it is static it can be directly invoked via the class.
+
 What is the difference between an Interface and Abstract class?
+Interface can only Initiator the methods while abstract class can implements them.
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+
 what is Access Specifier?
+it control the way the object can be shared or not to other classes.
+
 What is OOP ? Define each feature of java OOP.
+object-oriented programming, Encapsulation,Inheritance,Polymorphism
+
 What is API? Name list of API that you have used so far.
+Application program interface .Mockito, PowerMock, Junit, TestNG, Spock
+
 Does java support multiple inheritance?
+ava doesn't allow multiple inheritance.
+
 What is method overloading and when it happens?
+When methods name are same but number of arguments are different.
+
 What is method overriding and when it happens?
+When methods name are same and arguments are also the same. When you inheritance for a parent class but overwrite it in the child class.
+
 Explain exceptions in java and how to handle it.
-What is static keyword in java? How it has been used in variables and methods ?
+when a error occurs the method is called and it catches the exception.
+
+What is static keyword in java? How it has been used in variables and methods ?\
+yes static is a keyword in java .only one instance of a static field exists It will be shared by all instances.
+
 What is final and how it has been used variables and methods?
+final is when you make it unchangeable for any method or class to change the value.  It is use when you have something logical that is know to say the same in the real world like the hour in a day.
+
 What is final, finally and finalize?
+final is keyword for java for method class and variables. finally is bock to get exceptions and finalize is a method.
+
 What is a constructor ?
+ a object of class to access them .
+
 What is "this" keyword in java ?
+reference to the class in which it is called.
+
 What is "super" keyword in java?
+reference the parent class object.
+
 What is JVM stand for ?
+Java virtual machine
+
 What version of java are you using?
+1.8.0_111
+
 What is JAR stand for ?
+Java Archive
+
 What is compile time and run time?
+compile time is when the code is made in to machine code and run time is when the application is running
+
 What is heap?
+heap is where the object are stored.
+
 How java manage it's memory?
+with garbage collection.
+
 What is the difference between String, StringBuffer and StringBuilder?
+String is slow and consumes more memory.StringBuffer is fast and consumes less memory .StringBuilder is more efficient than StringBuffer

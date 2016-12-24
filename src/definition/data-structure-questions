@@ -1,27 +1,69 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+to organize and store data.
+
 List out the areas in which data structures are applied extensively?
+servers, gaming , sites.
+
 what is an Array?
+stored values in a line.
+
 what is the difference between the Array and ArrayList?
+arraylist are automatically resizable and arrays are not.
+
 what is LinkedList?
+bits that store date and the net node address.
+
 what is queue?
+First in first out
+
 what is stack?
+Fist in last out
+
 what is FIFO and LIFO?
+First in first out. Fist in last out
+
 what is the order of complexity?
+the size of the data and how fast it is executed.
+
 what is the best case to search an element from an array?
+Arraylist.
+
 what is the worst case to search an element from an array?
+linked list.
+
 what is tree in data structure?
+every node has at most two children
+
 what is graph in data structure?
+when every node is connected to an other node.
+
 what is the difference between the HashTable and HashMap?
+hash map is unsynchronized while hash table is . Hash map is fast then hash table .
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+
 How HashMap works in java?
+it help keep 2 data types one as a key and other value.
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+Thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array.
+
 What are the different ways of copying an array into another array?
+Object.clone(),System.arraycopy(),Arrays.copyOf(),Arrays.copyOfRange()
+
 What is difference between an array and a linked list?
+no need to define the size on Linked List.
+
 What is DFS and BFS?
+Breadth-first search and depth-first search
+
 What is Recursion?
+
 What is Big-(O)-notation?
+
+
 Outlined different kind of sorting algorithm with time complexity?
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
