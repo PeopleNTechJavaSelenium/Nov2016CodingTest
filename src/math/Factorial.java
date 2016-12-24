@@ -12,5 +12,36 @@ public class Factorial {
          *
          */
 
+       /* System.out.println("Using Recursion");
+        int n = 7;
+        int result = factorial(n);
+        System.out.println("The factorial of 7 is " + result);
+    }
+
+    public static int factorial(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }*/
+        System.out.println("Using Iteration:");
+        int n = 7;
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result = result * i;
+        }
+
+        int num = 9;
+        int factorialnum = factorial(num);
+        System.out.println("The factorial of "+num+ " is "+factorialnum);
+
+
+    }
+    public static int factorial(int num){
+
+        if (num > 1)
+            return num*factorial(num-1);
+        else
+            return 1;
     }
 }

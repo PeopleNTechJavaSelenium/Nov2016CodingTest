@@ -1,19 +1,17 @@
 package databases;
 
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoDatabase;
-
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoDatabase;
 
 /**
  * Created by mrahman on 12/18/16.
@@ -21,6 +19,7 @@ import java.util.Properties;
 
 
 public class ConnectDB {
+
 
     public static MongoDatabase mongoDatabase = null;
 
