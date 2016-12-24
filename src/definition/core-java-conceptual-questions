@@ -1,9 +1,13 @@
 Please answer the below core-java Questions:
 
 What jdk contains or composed of and define each components?
+<<<<<<< HEAD
 Java Development Kit (JDK) is a bundle of software components that is used to develop Java based applications.
 JDK includes the JRE, set of API classes, Java compiler, Webstart and additional files needed to write Java applets and applications.
 
+=======
+Ans: hi there
+>>>>>>> 5e2970f252189a15cc07ff735a4da9540095e530
 What is IDE?
 Integrated Development Environment. A software suite that consolidates the basic tools developers need to write and test software.
 
