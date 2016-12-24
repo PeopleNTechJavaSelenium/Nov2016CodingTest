@@ -1,4 +1,6 @@
-package design;
+package employee.info.system;
+import design.EmployeeInfo;
+
 
 public class CnnEmployee {
 
@@ -14,8 +16,17 @@ public class CnnEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
-		
 
+		EmployeeInfo empOne = new EmployeeInfo("Peter Parker","769");
+		empOne.calculateSalary("75000");
+		empOne.set("Photography");
+
+		Object peterSalary = new Salary("Peter Parker", 1, 3600.00);
+		peterSalary.mailCheck();
+		empOne.set();
+		peterSalary.setYearOfEmployeement(10);
+		peterSalary.getBonus();
+		peterSalary.toString();
 
 	}
 
