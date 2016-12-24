@@ -285,4 +285,103 @@ public class ConnectDB {
         //connection = ConnectionConfiguration.getConnection();
     }
 
+    public void InsertDataFromStringToMySqlTwoCol(String tableName, String ArrayData1, String columnName1, String ArrayData2, String columnName2)
+
+
+
+    {
+
+
+
+        try {
+
+            connectToDatabase();
+
+
+
+            ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName1+","+columnName2+" ) VALUES(?,?)");
+
+            ps.setString(1,ArrayData1);
+
+            ps.setString(2,ArrayData2);
+
+            ps.executeUpdate();
+
+
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+
+        } catch (ClassNotFoundException e) {
+
+            e.printStackTrace();
+
+        }
+
+    }
+    public void InsertDataFromStringToMySqlThreeCol(String tableName, String ArrayData1, String columnName1, String ArrayData2, String columnName2, String ArrayData3, String columnName3)
+
+
+
+
+
+    //  public void InsertDataFromArryToMySql()
+
+    {
+
+
+
+        try {
+
+            connectToDatabase();
+
+
+
+            //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
+
+
+
+
+
+            ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName1+","+columnName2+","+columnName3+" ) VALUES(?,?,?)");
+
+            ps.setString(1,ArrayData1);
+
+            ps.setString(2,ArrayData2);
+
+            ps.setString(3,ArrayData3);
+
+            ps.executeUpdate();
+
+            //System.out.println(list[n]);
+
+
+
+
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+
+        } catch (ClassNotFoundException e) {
+
+            e.printStackTrace();
+
+        }
+
+        //connection = ConnectionConfiguration.getConnection();
+
+    }
+
+
+
 }
