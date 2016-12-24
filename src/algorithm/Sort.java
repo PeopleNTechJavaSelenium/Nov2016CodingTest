@@ -8,17 +8,21 @@ public class Sort {
 	 * Store all the sorted data into one of the databases.
 	 */
 
-    public static void quicksort(int[] array, int left, int right) {
+    public void quicksort(int[] array) {
+        int left = 0;
+        int right = 1;
+
         if (left >= right) {
             return;
         }
         int pivot = array[(left + right) / 2];
         int index = partition(array, left, right, pivot);
-        quicksort(array, left, index - 1);
-        quicksort(array, index, right);
+        quicksort(array);
+        quicksort(array);
     }
 
-    public static int partition(int[] array, int left, int right, int pivot) {
+    public int partition(int[] array, int left, int right, int pivot) {
+        final long startTime = System.currentTimeMillis();
         while (left <= right) {
             while (array[left] < pivot) {
                 left++;
@@ -35,21 +39,19 @@ public class Sort {
 
         }
         final long endTime = System.currentTimeMillis();
-        //final long executionTime = endTime - startTime;
-        //this.executionTime = executionTime;
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return left;
 
     }
 
-    public static void printSortedArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
-    }
-
     public int[] selectionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
-        int[] list = array;
+
+        //int[] list = array;
+
+        int[] list = array.clone();
+
 
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
@@ -74,6 +76,7 @@ public class Sort {
 
     public int[] insertionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
+
         int[] list = array;
         int temp = 0;
         for (int i = 1; i < array.length; i++) {
@@ -83,7 +86,6 @@ public class Sort {
                     array[j - 1] = array[j];
                     array[j] = temp;
                 }
-
             }
         }
 
@@ -94,6 +96,7 @@ public class Sort {
         final long executionTime = endTime - startTime;
         this.executionTime = executionTime;
         return list;
+
 
     }
 
@@ -109,24 +112,18 @@ public class Sort {
                     array[j + 1] = temp;
                 }
             }
-            for (int n = 0; n < array.length; n++) {
-                System.out.println(array[n]);
-            }
+
         }
-
-
-        final long endTime = System.currentTimeMillis();
-        final long executionTime = endTime - startTime;
-        this.executionTime = executionTime;
-
+        for (int n = 0; n < array.length; n++) {
+            System.out.println(array[n]);
+        }
 
         return list;
     }
 
     public int[] mergeSort(int[] array) {
         final long startTime = System.currentTimeMillis();
-
-        int[] list = array;
+        //int[] list = array;
         //implement here
         if (array.length <= 1) ;
         int[] first = new int[array.length / 2];
@@ -147,37 +144,37 @@ public class Sort {
         final long executionTime = endTime - startTime;
         this.executionTime = executionTime;
 
-        return list;
-    }
 
-    public void quickSort(int[] array) {
-        final long startTime = System.currentTimeMillis();
-        int[] list = array;
-        quickSort(array);
+        return first;
     }
+    //public int [] quickSort(int [] array){
+    //    int [] list = array;
+    //implement here
+
+
+    //   return list;
+    //}
+
 
     public int[] heapSort(int[] array) {
-        final long startTime = System.currentTimeMillis();
-        int[] list = array;
+
 
         int i;
         int arr[] = {1, 3, 4, 5, 2};
         for (i = 0; i < arr.length; i++)
             System.out.print(" " + arr[i]);
         for (i = arr.length; i > 1; i--) {
-            fnSortHeap(arr, i - 1);
+            SortHeap(arr, i - 1);
         }
 
         for (i = 0; i < arr.length; i++)
             return arr;
 
-        final long endTime = System.currentTimeMillis();
-        final long executionTime = endTime - startTime;
-        this.executionTime = executionTime;
-        return list;
+
+        return array;
     }
 
-    public void fnSortHeap(int array[], int arr_ubound) {
+    public void SortHeap(int array[], int arr_ubound) {
         final long startTime = System.currentTimeMillis();
         int i, o;
         int lChild, rChild, mChild, root, temp;
@@ -217,8 +214,9 @@ public class Sort {
 
     }
 
-    public void bucketsort(int[] array) {
-        final long startTime = System.currentTimeMillis();
+    public void bucketsort(int[] array, int startTime) {
+
+
         int[] bucket = new int[(int) (startTime + 1)];
 
         for (int i = 0; i < bucket.length; i++) {
@@ -235,15 +233,12 @@ public class Sort {
                 array[outPos++] = i;
             }
         }
-        final long endTime = System.currentTimeMillis();
-        final long executionTime = endTime - startTime;
-        this.executionTime = executionTime;
+
     }
 
     public void shellsort(int[] array) {
         final long startTime = System.currentTimeMillis();
         int inner, outer;
-        int temp;
 
         int h = 1;
         while (h <= array.length / 3) {
@@ -251,20 +246,20 @@ public class Sort {
         }
         while (h > 0) {
             for (outer = h; outer < array.length; outer++) {
-                temp = array[outer];
+                h = array[outer];
                 inner = outer;
 
-                while (inner > h - 1 && array[inner - h] >= temp) {
+                while (inner > h - 1 && array[inner - h] >= h) {
                     array[inner] = array[inner - h];
                     inner -= h;
                 }
-                array[inner] = temp;
+                array[inner] = h;
             }
             h = (h - 1) / 3;
         }
+
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
         this.executionTime = executionTime;
-
     }
 }

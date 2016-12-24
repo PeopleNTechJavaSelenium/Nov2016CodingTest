@@ -2,11 +2,8 @@ package problems;
 
 import java.util.Arrays;
 
-/**
- * Created by mrahman on 4/9/16.
- */
-public class Anagram {
 
+public class Anagram {
     private static boolean isAnagram(String str1, String str2) {
 
         if (str1.length() != str2.length()) {
@@ -34,8 +31,6 @@ public class Anagram {
             System.out.println(str2 + " is anagram of " + str1);
         } else {
             System.out.println("Strings are not anagrams.");
-            System.out.println();
         }
     }
 }
-

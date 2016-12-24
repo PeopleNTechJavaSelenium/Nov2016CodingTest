@@ -1,17 +1,17 @@
 package databases;
 
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoDatabase;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoDatabase;
 
 /**
  * Created by mrahman on 12/18/16.
@@ -20,6 +20,7 @@ import java.util.Properties;
 
 public class ConnectDB {
 
+
     public static MongoDatabase mongoDatabase = null;
 
     Connection connect = null;
@@ -27,15 +28,28 @@ public class ConnectDB {
     PreparedStatement ps = null;
     ResultSet resultSet = null;
 
-    public static Properties loadProperties(String s, String arrayList, String list) throws IOException {
+    public static Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-        // try (InputStream ism = new FileInputStream("src/MySql.properties")) {
-        try (InputStream ism = new FileInputStream("C:/Users/riponctg/IdeaProjects/CodingExamNov2016/Nov2016CodingTest/src/MySql.properties")) {
-            prop.load(ism);
-            ism.close();
-        }
+        InputStream ism = new FileInputStream("src/MySql.properties");
+        prop.load(ism);
+        ism.close();
         return prop;
     }
+
+
+    public void connectToDatabase() throws IOException, SQLException, ClassNotFoundException {
+        Properties prop = loadProperties();
+        String driverClass = prop.getProperty("MYSQLJDBC.driver");
+        String url = prop.getProperty("MYSQLJDBC.url");
+        String userName = prop.getProperty("MYSQLJDBC.userName");
+        String password = prop.getProperty("MYSQLJDBC.password");
+        Class.forName(driverClass);
+        connect = DriverManager.getConnection(url,userName,password);
+        //  System.out.println("Database is connected");
+
+    }
+
+
 
     public static MongoDatabase connectMongoDB() {
 
@@ -49,19 +63,8 @@ public class ConnectDB {
         return mongoDatabase;
     }
 
-    public void connectToDatabase() throws IOException, SQLException, ClassNotFoundException {
-        Properties prop = loadProperties("ArrayList", "ArrayList", "list");
-        String driverClass = prop.getProperty("MYSQLJDBC.driver");
-        String url = prop.getProperty("MYSQLJDBC.url");
-        String userName = prop.getProperty("MYSQLJDBC.userName");
-        String password = prop.getProperty("MYSQLJDBC.password");
-        Class.forName(driverClass);
-        connect = DriverManager.getConnection(url, userName, password);
-        System.out.println("Database is connected");
 
-    }
-
-    public List<String> readDataBase(String tableName, String columnName) throws Exception {
+    public List<String> readDataBase(String tableName, String columnName)throws Exception{
         List<String> data = new ArrayList<String>();
 
         try {
@@ -71,7 +74,7 @@ public class ConnectDB {
             data = getResultSetData(resultSet, columnName);
         } catch (ClassNotFoundException e) {
             throw e;
-        } finally {
+        }finally{
             close();
         }
         return data;
@@ -79,17 +82,17 @@ public class ConnectDB {
 
 
     private void close() {
-        try {
-            if (resultSet != null) {
+        try{
+            if(resultSet != null){
                 resultSet.close();
             }
-            if (statement != null) {
+            if(statement != null){
                 statement.close();
             }
-            if (connect != null) {
+            if(connect != null){
                 connect.close();
             }
-        } catch (Exception e) {
+        }catch(Exception e){
 
         }
     }
@@ -97,7 +100,7 @@ public class ConnectDB {
 
     private List<String> getResultSetData(ResultSet resultSet2, String columnName) throws SQLException {
         List<String> dataList = new ArrayList<String>();
-        while (resultSet.next()) {
+        while(resultSet.next()){
             String itemName = resultSet.getString(columnName);
             dataList.add(itemName);
         }
@@ -105,7 +108,7 @@ public class ConnectDB {
     }
 
     // function  for Data insert into MySQL Database
-    public void InsertDataFromArryToMySql(int[] ArrayData, String tableName, String columnName)
+    public void InsertDataFromArryToMySql(int [] ArrayData,String tableName, String columnName)
     //InsertDataFromArryListToMySql
 
     //  public void InsertDataFromArryToMySql()
@@ -116,10 +119,10 @@ public class ConnectDB {
 
             //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
 
-            for (int n = 0; n < ArrayData.length; n++) {
+            for(int n=0; n<ArrayData.length; n++){
 
-                ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
-                ps.setInt(1, ArrayData[n]);
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+                ps.setInt(1,ArrayData[n]);
                 ps.executeUpdate();
                 //System.out.println(list[n]);
             }
@@ -137,7 +140,7 @@ public class ConnectDB {
 
     // Function for Insert Single value in a table
 
-    public void InsertDataFromStringToMySql(String ArrayData, String tableName, String columnName)
+    public void InsertDataFromStringToMySql(String ArrayData,String tableName, String columnName)
 
 
     //  public void InsertDataFromArryToMySql()
@@ -149,8 +152,8 @@ public class ConnectDB {
             //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
 
 
-            ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
-            ps.setString(1, ArrayData);
+            ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+            ps.setString(1,ArrayData);
             ps.executeUpdate();
             //System.out.println(list[n]);
 
@@ -166,7 +169,9 @@ public class ConnectDB {
     }
 
 
-    public List<String> directDatabaseQueryExecute(String passQuery, String dataColumn) throws Exception {
+
+
+    public List<String> directDatabaseQueryExecute(String passQuery,String dataColumn)throws Exception{
         List<String> data = new ArrayList<String>();
 
         try {
@@ -176,7 +181,7 @@ public class ConnectDB {
             data = getResultSetData(resultSet, dataColumn);
         } catch (ClassNotFoundException e) {
             throw e;
-        } finally {
+        }finally{
             close();
         }
         return data;
@@ -184,7 +189,7 @@ public class ConnectDB {
 
 //
 
-    public void InsertDataFromArryListToMySql(List<Object> list, String tableName, String columnName)
+    public void InsertDataFromArryListToMySql(List<Object> list,String tableName, String columnName)
     //InsertDataFromArryListToMySql
 
     //  public void InsertDataFromArryToMySql()
@@ -195,11 +200,11 @@ public class ConnectDB {
 
             //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
 
-            for (Object st : list) {
+            for(Object st:list){
                 // System.out.println(st);
 
-                ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
-                ps.setObject(1, st);
+                ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
+                ps.setObject(1,st);
                 ps.executeUpdate();
                 //System.out.println(list[n]);
             }

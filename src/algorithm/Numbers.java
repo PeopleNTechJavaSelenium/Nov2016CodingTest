@@ -1,11 +1,22 @@
 package algorithm;
 
+
 import java.util.Random;
 
-/*
- *Created by PIIT_NYA on 12/11/2016.
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Properties;
+
+/**
+ * Created by aleks_000 on 12/21/2016.
  */
 public class Numbers {
+
 
 	/*
      * Show all the different kind of sorting algorithm by applying into (num array).
@@ -47,7 +58,7 @@ public class Numbers {
         System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + mergeSortExecutionTime + " milli sec");
 
         //QuickSort
-        algo.quickSort(num);
+        algo.quicksort(num);
         long quickSortExecutionTime = algo.executionTime;
         System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + quickSortExecutionTime + " milli sec");
 
@@ -57,7 +68,7 @@ public class Numbers {
         System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + heapSortExecutionTime + " milli sec");
 
         //bucketsort
-        algo.bucketsort(num);
+        // algo.bucketsort(num);
         long bucketSortExecutionTime = algo.executionTime;
         System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + bucketSortExecutionTime + " milli sec");
 
@@ -66,6 +77,7 @@ public class Numbers {
         long shellSortExecutionTime = algo.executionTime;
         System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + shellSortExecutionTime + " milli sec");
     }
+
 
 
 }

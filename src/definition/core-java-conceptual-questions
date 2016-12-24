@@ -1,7 +1,7 @@
 Please answer the below core-java Questions:
 
-
 What jdk contains or composed of and define each components?
+
 Ans: The java development kit(JDK) contains a private Java Virtual Mechine(JVM) and few other composed of resource of:
 appletviewer: Which can be used to run and debug applets without a web browser.
 apt: The annotation processing tool.
@@ -229,3 +229,132 @@ demo2=new StringBuilder("Bye");
 
 
 
+=======
+<<<<<<< HEAD
+Java Development Kit (JDK) is a bundle of software components that is used to develop Java based applications.
+JDK includes the JRE, set of API classes, Java compiler, Webstart and additional files needed to write Java applets and applications.
+
+=======
+Ans: hi there
+>>>>>>> 5e2970f252189a15cc07ff735a4da9540095e530
+What is IDE?
+Integrated Development Environment. A software suite that consolidates the basic tools developers need to write and test software.
+
+What are the IDEs available in the market to support java?
+Eclipse, Intellij (what I am using now), Netbeans
+
+Explain the entire java life cycle.
+A Java program is written using either a Text Editor like Textpad or an IDE like Eclipse and is saved as a .java file. (Program.java)
+The .java file is then compiled using Java compiler and a .class file is obtained from it. (Program.class)
+The .class file is now portable and can be used to run this Java program in any platform.
+Class file (Program.class) is interpreted by the JVM installed on a particular platform. JVM is part of the JRE software.
+
+what is class?
+A class is nothing but a blueprint or a template for creating different objects which defines its properties and behaviors.
+Java class objects exhibit the properties and behaviors defined by its class. A class can contain fields and methods to describe
+the behavior of an object.
+
+What is object?
+Object − Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors –
+wagging the tail, barking, eating. An object is an instance of a class. Class − A class can be defined as a template/blueprint
+that describes the behavior/state that the object of its type support.
+
+What is the entry point of an application?
+Main method (public static void main)
+
+Why main is static?
+This is neccesary because main() is called by the JVM before any objects are made. Since it is static it can be directly
+invoked via the class. Similarly, we use static sometime for user defined methods so that we need not to make objects.
+void indicates that the main() method being declared does not return a value.
+
+What is the difference between an Interface and Abstract class?
+In interface no methods are implemented. In abstract class, some methods are implemented and others are not.
+
+Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+No, you have to create another class that extends or implements the interface or abstract class. After you have defined
+all of the methods, you are able to make an instance of that class.
+
+what is Access Specifier?
+Public, private, protected.
+
+What is OOP ? Define each feature of java OOP.
+Object oriented programming. Programming where you create instances of classes and then use their methods and variables
+to write computer code.
+The basic unit of OOP is a class, which encapsulates both the static properties and dynamic operations within a "box",
+and specifies the public interface for using these boxes. Since classes are well-encapsulated, it is easier to reuse
+these classes. In other words, OOP combines the data structures and algorithms of a software entity inside the same box.
+
+What is API? Name list of API that you have used so far.
+In computer programming, an application programming interface (API) is a set of subroutine definitions, protocols,
+and tools for building application software. A good API makes it easier to develop a computer program by providing
+all the building blocks, which are then put together by the programmer.
+
+Does java support multiple inheritance?
+Never. You can only inherit one class in Java, unlike in C++ where you can inherit multiple classes.
+
+What is method overloading and when it happens?
+When you have more than one method with different signatures. The Java Compiler knows which method to call based on what
+variables are passed to it.
+
+What is method overriding and when it happens?
+When a class inherits another class, it can use the method of that other class. However, if you want to make your own
+method instead of use the one that was inherited, you have that option, and simply write your own. This is called
+overriding the previous method.
+
+Explain exceptions in java and how to handle it.
+Sometimes a class in Java throws an exception, and you have to catch the exception in your code by using the Try Catch
+syntax.
+
+What is static keyword in java? How it has been used in variables and methods ?
+The static keyword in Java means that the variable or function is shared between all instances of that class as it
+belongs to the type, not the actual objects themselves. So if you have a variable: private static int i = 0; and you
+increment it ( i++ ) in one instance, the change will be reflected in all instances.
+
+What is final and how it has been used variables and methods?
+Once a final variable has been assigned, it always contains the same value. If a final variable holds a reference to
+an object, then the state of the object may be changed by operations on the object, but the variable will always refer
+ to the same object.
+
+What is final, finally and finalize?
+Final class can't be inherited, final method can't be overridden and final variable value can't be changed.
+Finally is used to place important code, it will be executed whether exception is handled or not. Finalize is
+used to perform clean up processing just before object is garbage collected.
+
+What is a constructor ?
+It initializes the instance.
+
+What is "this" keyword in java ?
+Refers to the local variable of the class.
+
+What is "super" keyword in java?
+When you want to refer to the class that the current class inherited from.
+
+What is JVM stand for ?
+A Java virtual machine (JVM) is an abstract computing machine that enables a computer to run a Java program.
+There are three notions of the JVM: specification, implementation, and instance. The specification is a document
+that formally describes what is required of a JVM implementation.
+
+What version of java are you using?
+Java 8
+
+What is JAR stand for ?
+A JAR (Java Archive) is a package file format typically used to aggregate many Java class files and associated metadata
+and resources (text, images, etc.) into one file to distribute application software or libraries on the Java platform.
+
+What is compile time and run time?
+The source code must be compiled into machine code in order to become and executable program. This compilation process
+is referred to as compile time. A compiled program can be opened and run by a user. When an application is running,
+it is called runtime.
+
+What is heap?
+The heap is the runtime data area from which memory for all class instances and arrays is allocated.
+The heap is created on virtual machine start-up. Heap storage for objects is reclaimed by an automatic storage
+management system (known as a garbage collector); objects are never explicitly deallocated.
+
+How java manage it's memory?
+Java has a 'trash collector' that deletes variables that are no longer being used by the program.
+
+What is the difference between String, StringBuffer and StringBuilder?
+A String is the most basic of the 3. StringBuffer allows you to manipulate the string using method calls.
+StringBuilder allows you to build a string that you know you are going to continue adding more data to.
+>>>>>>> b366a40d7778f36bd139ad5ed521bd9e39d5b4d7

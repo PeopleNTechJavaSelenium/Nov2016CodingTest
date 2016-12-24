@@ -11,9 +11,10 @@ public class DataReader {
 
     public static void main(String[] args) {
         /*
-		 * User API to read the below textFile and print to console.
+         * User API to read the below textFile and print to console.
 		 * Use BufferedReader class. 
 		 * Use try....catch block to handle Exception.
+
 		 *
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
@@ -31,6 +32,7 @@ public class DataReader {
             System.out.println("PLease fix the path");
         }
 
+
         try {
             br = new BufferedReader(fr);
             String text = null;
@@ -47,11 +49,16 @@ public class DataReader {
                 fr = null;
             }
         }
-        connectDB.InsertDataFromStringToMySql("core_java", "text", "text");
+        //connectDB.InsertDataFromStringToMySql("core_java", "text", "text");
     }
 
 
 }
+
+
+
+
+
 
 
 

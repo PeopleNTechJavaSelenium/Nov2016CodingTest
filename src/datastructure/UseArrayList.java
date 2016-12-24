@@ -30,6 +30,6 @@ public class UseArrayList {
             System.out.println(pizza);
 
         MongoDatabase mongoDatabase = ConnectDB.connectMongoDB();
-        Properties properties = ConnectDB.loadProperties("ArrayList", "ArrayList", "list");
+        //Properties properties = ConnectDB.loadProperties("ArrayList", "ArrayList", "list");
     }
 }
