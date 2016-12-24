@@ -1,0 +1,92 @@
+Please answer the below Data Structure Questions:
+
+why do we need data structure?
+Ans: Data structure is a particular way of storing and organizing information  in a computer  so that it can be retrieved and used most productively.
+Data structures are important for the following reasons:
+1. Data structures are used in almost every program or software system.
+2. Specific data structures are essential ingredients of many efficient algorithms, and make possible the management of huge amounts of data, such as large integrated collection of databases.
+3. Some programming languages emphasize data structures, rather than algorithms, as the key organizing factor in software design.
+List out the areas in which data structures are applied extensively?
+Ans:Compiler Design,Operating System,Database Management System,Statistical analysis package,Numerical Analysis,Graphics,Artificial Intelligence,Simulation and many more.
+what is an Array?
+Ans: An array is a container object that holds a fixed number of values of a single type. The length of an array is established when the array is created. After creation, its length is fixed.
+what is the difference between the Array and ArrayList?
+Ans: Main difference between Array vs ArrayList in Java is static nature of Array and dynamic nature of ArrayList. Once created you can not change size of Array but ArrayList can re-size itself when needed.
+what is LinkedList?
+Ans:LinkedList is an implementation of List interface.A linked-list is a sequence of data structures which are connected together via links.Linked List is a sequence of links which contains items. Each link contains a connection to another link.
+what is queue?
+Ans:A queue is a data collection in which the items are kept in the order in which they were inserted, and the primary operations are enqueue (insert an item at the end) and dequeue (remove the item at the front).
+what is stack?
+Ans:A stack is a data structure that allows data to be inserted (a 'push' operation), and removed (a 'pop' operation). Many stacks also support a read ahead (a 'peek' operation), which reads data without removing it.
+what is FIFO and LIFO?
+Ans:Stack is a LIFO (last in first out) data structure.Queue is a FIFO (first in first out) data structure.
+what is the order of complexity?
+Ans:Generally, an algorithm has an asymptotic computational complexity. Assuming the input is of size N, we can say that the algorithm will finish at O(N), O(N^2), O(N^3), O(N*log(N)) etc. This means that it is a certain mathematical expression of the size of the input, and the algorithm finishes between two factors of it.Generally, the smaller the order of complexity of the program's underlying algorithm, the faster it will run and the better it will scale as the input gets larger. Thus, we should often seek more efficient algorithms in order to reduce the order of complexity.
+what is the best case to search an element from an array?
+Ans:Assume that the Array is unsorted, the best case would be the element is the very first element.But if Array is a sorted array, there is a much faster way,in the best case, the item is the middle in the Array.
+what is the worst case to search an element from an array?
+Ans:Assume that the Array is unsorted, the worst case would be the element would be the very last element or the element does not exist in the Array.But if Array is a sorted array,in the worst case,the item does not exist in the Array at all.
+what is tree in data structure?
+Ans:A tree is a widely used abstract data type (ADT)—or data structure implementing this ADT—that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the constraints that no reference is duplicated, and none points to the root.
+what is graph in data structure?
+Ans:a graph is an abstract data type that is meant to implement the undirected graph and directed graph concepts from mathematics.A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph. These pairs are known as edges, arcs, or lines for an undirected graph and as arrows, directed edges, directed arcs, or directed lines for a directed graph. The vertices may be part of the graph structure, or may be external entities represented by integer indices or references.A graph data structure may also associate to each edge some edge value, such as a symbolic label or a numeric attribute (cost, capacity, length, etc.).
+what is the difference between the HashTable and HashMap?
+Ans:HashMap and Hashtable both are used to store data in key and value form. Both are using hashing technique to store unique keys.But there are many differences between HashMap and Hashtable classes that are given below.
+1) HashMap is non synchronized. It is not-thread safe and can't be shared between many threads without proper synchronization code.
+   Hashtable is synchronized. It is thread-safe and can be shared with many threads.
+2) HashMap allows one null key and multiple null values.
+   Hashtable doesn't allow any null key or value.
+3) HashMap is a new class introduced in JDK 1.2.
+   Hashtable is a legacy class.
+4) HashMap is fast.
+   Hashtable is slow.
+5) We can make the HashMap as synchronized by calling this code
+   Map m = Collections.synchronizedMap(hashMap);
+   Hashtable is internally synchronized and can't be unsynchronized.
+6) HashMap is traversed by Iterator.
+   Hashtable is traversed by Enumerator and Iterator.
+7) Iterator in HashMap is fail-fast.
+   Enumerator in Hashtable is not fail-fast.
+8) HashMap inherits AbstractMap class.
+   Hashtable inherits Dictionary class.
+What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+Ans:RDBMS – Array (i.e. Array of structures),Network data model – Graph, Hierarchical data model – Trees
+How HashMap works in java?
+Ans:HashMap in Java works on hashing principle. It is a data structure which allows us to store object and retrieve it in constant time O(1) provided we know the key. In hashing, hash functions are used to link key and value in HashMap. Objects are stored by calling put(key, value) method of HashMap and retrieved by calling get(key) method. When we call put method, hashcode() method of the key object is called so that hash function of the map can find a bucket location to store value object, which is actually an index of the internal array, known as the table. HashMap internally stores mapping in the form of Map.Entry object which contains both key and value object. When you want to retrieve the object, you call the get() method and again pass the key object. This time again key object generate same hash code (it's mandatory for it to do so to retrieve the object and that's why HashMap keys are immutable e.g. String) and we end up at same bucket location. If there is only one object then it is returned and that's your value object which you have stored earlier. Things get little tricky when collisions occur.
+What is ArrayIndexOutOfBoundsException in java? When it occurs?
+Ans:ArrayIndexOutOfBoundsException is thrown when an Array is accessed an illegal index.The index accessed may be negative or equal to the size of the Array or greater than the size of the Array.
+What are the different ways of copying an array into another array?
+Ans:methods used to copy one array values into another array. There are several ways to copy an array:
+use the various copyOf and copyOfRange methods of the Arrays class - probably the simplest method
+use System.arraycopy - useful when copying parts of an array
+call its clone method, and do a cast - the simplest style, but only a shallow clone is performed
+use a for loop - more than one line, and needs a loop index
+What is difference between an array and a linked list?
+Ans:Both Arrays and Linked List can be used to store linear data of similar types, but they both have some advantages and disadvantages over each other.
+Following are the points in favour of Linked Lists.
+(1) The size of the arrays is fixed: So we must know the upper limit on the number of elements in advance. Also, generally, the allocated memory is equal to the upper limit irrespective of the usage, and in practical uses, upper limit is rarely reached.
+(2) Inserting a new element in an array of elements is expensive, because room has to be created for the new elements and to create room existing elements have to shifted.
+Linked lists have following drawbacks:
+1) Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists.
+2) Extra memory space for a pointer is required with each element of the list.
+3) Arrays have better cache locality that can make a pretty big difference in performance.
+What is DFS and BFS?
+Ans:DFS (Depth First Search) and BFS (Breadth First Search) are search algorithms used for graphs and trees. When you have an ordered tree or graph, like a BST, it’s quite easy to search the data structure to find the node that you want. But, when given an unordered tree or graph, the BFS and DFS search algorithms can come in handy to find what you’re looking for. The decision to choose one over the other should be based on the type of data that one is dealing with.
+What is Recursion?
+Ans:Recursion is a basic programming technique.in which a method calls itself to solve some problem. A method that uses this technique is recursive. Many programming problems can be solved only by recursion, and some problems that can be solved by other techniques are better solved by recursion.
+What is Big-(O)-notation?
+Ans:Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity. It is a member of a family of notations invented by Paul Bachmann,Edmund Landau, and others, collectively called Bachmann–Landau notation or asymptotic notation.
+
+Ans:Can not create a table here
+http://bigocheatsheet.com/
+Outlined different kind of sorting algorithm with time complexity?
+
+Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
+  a)In terms of Accessing element.
+  b)In terms of Inserting element.
+  c)In terms of Searching element.
+  d)In terms of Removing element.
+Ans: Can not make a table here :(
+
+http://bigocheatsheet.com/
+

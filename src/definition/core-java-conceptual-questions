@@ -1,0 +1,106 @@
+Please answer the below core-java Questions:
+
+
+What jdk contains or composed of and define each components?
+Ans: The JDK or Java Development Kit contains a variety of tools and java development information.Following is a list of the main components of JDK:
+1. The Runtime Interpreter
+It provides the support to run java executable programs in compiled,bytecode format.
+2. The Compiler
+Java compiler(javac) is used to compile java source code files into executable java bytecode classes.
+3. The Applet Viewer
+It is a tool that serves as a minimal test bed for final release java applets.It can be used to test programs instead of having to wait for Hotjava to support the final release of Java.
+4. The Debugger
+The Java Debugger ,jdb is a simple command-line debugger for Java classes.
+5. The Class File Disassembler
+The javap command is the disassembly tool of JDK that disassembles one or more class files.
+6. The Header and Stub File Generator
+Java Header File Generator(javah command-line tool) generates C header and source files that are needed to implement native methods.
+7. The Documentation Generator
+Java documentation helps to maintain code.
+8. Applet Demos
+Applet demos are interesting examples of Java Applets, which all come with complete source code.
+9. API Source Code
+The complete source code for the Java API (Application Programming Interface) classes is provided.
+What is IDE?
+Ans: Integrated Development Environment.
+What are the IDEs available in the market to support java?
+Ans: NetBeans,IntelliJ IDEA, Eclipse,JDeveloper,DrJava,MyEclipse,JGrasp,JEdit,BlueJ etc.
+Explain the entire java life cycle.
+Ans: Java programs can be written by using any text editor/IDE to create the high-level Java text file. This file is saved as a .java file on the disk. We then compile this text file using the Java compiler, which result in a .class file being created on the disk. The .class file contains the bytecodes. The file is then loaded into memory by the class loader. The bytecode verifier confirms that the bytecodes are valid and not hostile. Finally, the JVM reads the bytecodes in memory and translates them into machine code.
+what is class?
+Ans: A class is nothing but a blueprint or a template for creating different objects which defines its properties and behaviors. Java class objects exhibit the properties and behaviors defined by its class. A class can contain fields and methods to describe the behavior of an object.
+What is object?
+Ans:Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors – wagging the tail, barking, eating. An object is an instance of a class.
+What is the entry point of an application?
+Ans: The main method is the entry point of a Java application. Specifically、when the Java Virtual Machine is told to run an application by specifying its class (by using the java application launcher), it will look for the main method with the signature of public static void main(String[]).
+Why main is static?
+Ans: This is necessary because main() is called by the JVM before any objects are made. Since it is static it can be directly invoked via the class. Similarly, we use static sometime for user defined methods so that we need not to make objects.
+What is the difference between an Interface and Abstract class?
+Ans:Abstract class can have abstract and non-abstractmethods.Interface can have only abstract methods.Abstract class doesn't support multiple inheritance.Interface supports multiple inheritance.Abstract class can have final, non-final, static and non-static variables.Interface has only static and final variables.
+Abstract class can have static methods, main method and constructor.Interface can't have static methods, main method or constructor.Abstract class can provide the implementation of interface.Interface can't provide the implementation of abstract class.
+Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+what is Access Specifier?
+Ans:Access Specifiers (also known as Visibility Specifiers ) regulate access to classes, fields and methods in Java.These Specifiers determine whether a field or method in a class, can be used or invoked by another method in another class or sub-class. Access Specifiers can be used to restrict access. Access Specifiers are an integral part of object-oriented programming.
+In java we have four Access Specifiers and they are listed below.
+1. public
+2. private
+3. protected
+4. default(no specifier)
+What is OOP ? Define each feature of java OOP.
+Ans: Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. It simplifies the software development and maintenance by providing some concepts:
+1. Object
+Any entity that has state and behavior is known as an object. For example: chair, pen, table, keyboard, bike etc. It can be physical and logical.
+2. Class
+Collection of objects is called class. It is a logical entity.
+3. Inheritance
+When one object acquires all the properties and behaviours of parent object i.e. known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism.
+4. Polymorphism
+When one task is performed by different ways i.e. known as polymorphism. For example: to convince the customer differently, to draw something e.g. shape or rectangle etc.In java, we use method overloading and method overriding to achieve polymorphism.
+5. Abstraction
+Hiding internal details and showing functionality is known as abstraction. For example: phone call, we don't know the internal processing.
+In java, we use abstract class and interface to achieve abstraction.
+6. Encapsulation
+Binding (or wrapping) code and data together into a single unit is known as encapsulation. For example: capsule, it is wrapped with different medicines.
+A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+What is API? Name list of API that you have used so far.
+Ans: API stands for Application Programming Interface,It is a list of all classes that are part of the Java development kit (JDK). It includes all Java packages, classes, and interfaces, along with their methods, fields, and constructors. These prewritten classes provide a tremendous amount of functionality to a programmer.
+I have used String,Array,ArraytList,Math,Color,Scanner,Junit,testNg,Boolean,Byte,Float,Integer,Hashtable,Vector,StringTokenizer,Calendar,TimeZone,I/O, Swing etc.
+Does java support multiple inheritance?
+Ans: Np Java does not support multiple inheritance but we can achieve such advantage by declaring Interfaces and implement them.
+What is method overloading and when it happens?
+Ans:If a class have multiple methods by same name but different parameters, it is known as Method Overloading. it happens at compile time.
+What is method overriding and when it happens?
+Ans:Declaring a method in subclass which is already present in parent class is known as method overriding. Earlier we shared method overloading in java.It happens at run time.
+Explain exceptions in java and how to handle it.
+Ans: In java, exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.An exception (or exceptional event) is a problem that arises during the execution of a program. When an Exception occurs the normal flow of the program is disrupted and the program/Application terminates abnormally, which is not recommended, therefore, these exceptions are to be handled by using try,catch,throw and finally.
+What is static keyword in java? How it has been used in variables and methods ?
+Ans:The static keyword in Java means that the variable or function is shared between all instances of that class as it belongs to the type, not the actual objects themselves.The static keyword in Java means that the variable or function is shared between all instances of that class as it belongs to the type, not the actual objects themselves.So if you have a variable: private static int i = 0; and you increment it (i++) in one instance, the change will be reflected in all instances. i will now be 1 in all instances.Static methods can be used without instantiating an object.
+What is final and how it has been used variables and methods?
+Ans: In Java we use final keyword to variables to make its values not to be changed. But I see that you can change the value in the constructor / methods of the class. Again, if the variable is static then it is a compilation error.The final keyword can be applied with the variables, a final variable that have no value it is called blank final variable or uninitialized final variable. It can be initialized in the constructor only. The blank final variable can be static also which will be initialized in the static block only.
+If you make any variable as final, you cannot change the value of final variable(It will be constant).If you make any method as final, you cannot override it.
+What is final, finally and finalize?
+Final is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed.Final is a keyword.
+Finally is used to place important code, it will be executed whether exception is handled or not.Finally is a block.
+Finalize is used to perform clean up processing just before object is garbage collected.Finalize is a method.
+What is a constructor ?
+Ans:Constructor in java is a special type of method that is used to initialize the object.Java constructor is invoked at the time of object creation. It constructs the values i.e. provides data for the object that is why it is known as constructor.
+What is "this" keyword in java ?
+Ans:This is a keyword in Java. It can be used inside the Method or constructor of Class. It(this) works as a reference to the current Object whose Method or constructor is being invoked. The this keyword can be used to refer to any member of the current object from within an instance Method or a constructor.
+What is "super" keyword in java?
+Ans: The super keyword in java is a reference variable that is used to refer immediate parent class object.
+Whenever you create the instance of subclass, an instance of parent class is created implicitly i.e. referred by super reference variable.
+What is JVM stand for ?
+Ans: JVM stands for Java Virtual Machine.
+What version of java are you using?
+Ans:Java 1.0.8_71
+What is JAR stand for ?
+Ans:JAR stands for Java Archive. It is a compressed file, which means that it is a file that has been reduced in size. This is often done to speed up distribution over the Internet and to save storage space.
+What is compile time and run time?
+Ans: Once you have done writing your program(whatever the programming languages). You will do compile/build to find any error in your code. while doing compile or build, the compiler check for syntax errors. Some static values and object creation can also be taken place during compile time.
+once the program loaded into the memory, based on your code the values may assign to variable or object creation can be done and also you will get your preferred output if your logic is right?.
+What is heap?
+Ans:Java objects reside in an area called the heap. The heap is created when the JVM starts up and may increase or decrease in size while the application runs. When the heap becomes full, garbage is collected.
+How java manage it's memory?
+Ans:Java Memory Management, with its built-in garbage collection, is one of the language’s finest achievements. It allows developers to create new objects without worrying explicitly about memory allocation and deallocation, because the garbage collector automatically reclaims memory for reuse. This enables faster development with less boilerplate code, while eliminating memory leaks and other memory-related problems. At least in theory.
+What is the difference between String, StringBuffer and StringBuilder?
+Ans:The most important difference between String and StringBuffer/StringBuilder in java is that String object is immutable whereas StringBuffer/StringBuilder objects are mutable.By immutable,means that the value stored in the String object cannot be changed. Then the next question tha
