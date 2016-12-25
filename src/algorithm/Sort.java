@@ -36,6 +36,22 @@ public class Sort {
         final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
+        int i;
+        int itemSorted;
+
+        for (i = 1; i < list.length; i++) {
+            itemSorted = list[i];
+            int j;
+            for (j = i - 1; j >= 0 && list[j] > itemSorted; j--) {
+                list[j + 1] = list[j];
+            }
+            list[j + 1] = itemSorted;
+        }
+
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
+        return list;
 
 
 
@@ -66,23 +82,42 @@ public class Sort {
     
 
     public int [] mergeSort(int [] array){
+        final long startTime = System.currentTimeMillis();
+
+
         int [] list = array;
         //implement here
-        
+        int[] workSpace = new int[array.length];
+        int temp = 0;
+        recMergeSort(list, workSpace, 0, array.length - 1);
+
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         
 
         return list;
     }
-    
+
+    private void recMergeSort(int[] list, int[] workSpace, int i, int i1) {
+    }
+
 
     public int [] quickSort(int [] array){
         int [] list = array;
         //implement here
+        final long startTime = System.currentTimeMillis();
 
-        
-        
+        int[] workSpace = new int[array.length];
 
+        quickSort(list, 0, array.length - 1);
+
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return list;
+        
+
     }
     
     public int [] heapSort(int [] array){
