@@ -2,32 +2,119 @@ Please answer the below core-java Questions:
 
 
 What jdk contains or composed of and define each components?
+Anw:
+Jdk (Java Development Kit) is a software development environment for Java application.
+Components of JDK:
+Java Runtime Environment(JRE)-
+Interpreter/Loader (java)-
+Compiler (javac)
 What is IDE?
+ ANS;
+ Integrated Development Environment (IDE)- Is a software for developer to write codes and have excess to many different
+  tools such as code editor, a compiler or interpreter and a debugger.
 What are the IDEs available in the market to support java?
+ANS:
+1.Eclipse
+2.IntelliJ IDEA
+3.NetBeans
+4.Xcode
 Explain the entire java life cycle.
+ANS;
+First, you have to write a code in a editor (ex.Eclipse,Intellij,...) and you get a output of a source code.
+Second,the java compiler reads the source code, turns it into a bytecode and turns it into a .class file.
+Third, in the JVM, the class loader loads the .class file, Bytecode Verifier check for any errors and displays our code
 what is class?
+ANS;
+A class is an  program-code-template for creating objects
 What is object?
+ANS;
+Object are instance of a class where the object can be a combination of variables, functions, and data structures.
 What is the entry point of an application?
+ANS:
+
 Why main is static?
+ANS:
+Static -access modifier means we can call this method directly using class name without creating an object of it.
 What is the difference between an Interface and Abstract class?
+ANS:
+ An Abstract class has abstract method that is declared, but contains no implementation.
+An Interface class  is a collection of abstract methods, interface class implements a abstract class, therefore
+inheriting the abstract method
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+ANS:
+No, you cant create a object from an interface and abstract class. You would have create a concrete class which extends the abstract class
+
 what is Access Specifier?
+ANS:
+A Access specifier are set the accessibility of classes, methods, and other members.
 What is OOP ? Define each feature of java OOP.
+ANS:
+OOP is a programming language model organized around objects rather than "actions" and data rather than logic.
+Inheritance-A class that is derived from another class is called a subclass (also a derived class, extended class, or child class).
+Polymorphism-Having a method with the same name but with different values.
+Abstraction-Abstract classes may or may not contain abstract methods
+Encapsulation-In encapsulation Declare the variables of a class as private and provide public setter and getter methods to modify and view the variables values.
 What is API? Name list of API that you have used so far.
+ANS:
+API stands for Application Programming Interfaces
+API are classes that are builtin with in java.
+Some API I used are
+Scanner
+BufferedReader
+FileReader
+Math
+Date
 Does java support multiple inheritance?
+ANS:
+Java does't support multiple inheritance
 What is method overloading and when it happens?
+Method overloading is when you have two more methods with the same name.
+Method overloading occurs in the compile time.
 What is method overriding and when it happens?
+ANS:
+Declaring a method in subclass which is already present in parent class.
+Method overriding occurs in the runtime.
 Explain exceptions in java and how to handle it.
+ANS:
+You use  exceptions to see if there was a error
 What is static keyword in java? How it has been used in variables and methods ?
+ANS:
+Static means that it is shared for all the classes
+You can call the static methods even if you didn't create the object
 What is final and how it has been used variables and methods?
+ANS:
+Final means you can't change the values or methods
 What is final, finally and finalize?
+ANS:
+Final- A class or method can't be change
+Finally-Use for place a important code
+Finalize-Its use for cleaning up.
 What is a constructor ?
+ANS:
+When you initializes an object
 What is "this" keyword in java ?
+ANS:
+"This" keyword works as a reference to current object whose method or constructor is being invoked.
 What is "super" keyword in java?
+ANS:
+"Super" keyword is invoke the parent class.
 What is JVM stand for ?
+ANS:
+JVM- stands for Java Virtual Machine
 What version of java are you using?
+ANS:
+8.0.11
 What is JAR stand for ?
+ANS:
+JAR stands for Java Archive
 What is compile time and run time?
+ANS:
+The source code must be compiled into machine code in order to become and executable program.
+The runtime or execution environment is the part of a language implementation which executes code.
 What is heap?
+ANS:
 How java manage it's memory?
+ANS:
+
 What is the difference between String, StringBuffer and StringBuilder?

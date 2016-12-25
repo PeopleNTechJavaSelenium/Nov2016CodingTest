@@ -1,26 +1,65 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+ANS:
+We store data and information in data structure
 List out the areas in which data structures are applied extensively?
+ANS:
+Operating system
+Back-end testing
+Database Management system
 what is an Array?
+ANS:
+Array stores a fixed-size sequential collection of elements of the same type.
 what is the difference between the Array and ArrayList?
+ANS:
+ArrayList are easier to modify where else array are harder to modify.
 what is LinkedList?
+ANS:
+LinkedList are were u can modify add elements in the beginning, end, or in the middle
 what is queue?
+ANS:
+IS first one in, first one out.
 what is stack?
+ANS:
+Last one in, first one out.
 what is FIFO and LIFO?
+ANS:
+FIFO are first in first one out
+LIFO is last one in first one out.
 what is the order of complexity?
 what is the best case to search an element from an array?
+ANS:
+ArrayList
 what is the worst case to search an element from an array?
+ANS:
+Arrays
 what is tree in data structure?
+ANS:
+Tree in data structure are nodes where data is store.
 what is graph in data structure?
+ANS:
+Graph are where nodes are connect
 what is the difference between the HashTable and HashMap?
+ANS:
+Hashtable is synchronized whereas Hashmap is not.
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
 How HashMap works in java?
+ANS:
+HashMap maintains key and value pairs.
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+ANS:
+Occurs in array where the size of array has an error.
 What are the different ways of copying an array into another array?
+ANS:
+There is a built in class where the array can be copied
 What is difference between an array and a linked list?
+ANS:
+Array is where u store data, link list where u store data in nodes.
 What is DFS and BFS?
 What is Recursion?
+ANS:
+Where a method calls it self.
 What is Big-(O)-notation?
 Outlined different kind of sorting algorithm with time complexity?
 

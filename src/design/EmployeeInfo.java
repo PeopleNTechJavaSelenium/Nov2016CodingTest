@@ -1,6 +1,6 @@
 package design;
 
-public class EmployeeInfo{
+class EmployeeInfo  extends EmployeesAbstract{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -16,8 +16,21 @@ public class EmployeeInfo{
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	static String companyName;
-	
+
+	final void CEO (){
+		System.out.println("Jubar Khan is the CEO ");
+	}
+
+	public void numberOfEmployees(){
+        System.out.println("Number of employeed sre 300");
+    }
+
+    static String companyName;
+	static String vicePrisdent;
+
+
+
+
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -29,11 +42,13 @@ public class EmployeeInfo{
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeId();
+
 	}
     public EmployeeInfo(String name, int employeeId){
-		
-	}
+	    this.employeeId();
+	    this.employeeName();
+    }
 	
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
@@ -43,9 +58,12 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeBonus(){
-		int total=0;
-		return total;
+	public static void calculateEmployeBonus(){
+
+		EmployeeInfo salray = new EmployeeInfo();
+		salray.bonus(55000,10);
+		salray.bonus(55000,8);
+
 	}
 	
 	/*
@@ -56,7 +74,21 @@ public class EmployeeInfo{
 	 * 
 	 */
 	public static int calculateEmployePension(){
-		int total=0;
-		return total;
+		int salary = 50000;
+		int pension= 5;
+		int pension2 = 10;
+
+		public int total (int salary, int pension){
+			return salary*pension;
+
 	}
+		public int total2(int salary, int pension2) {
+			return salary * pension2;
+		}
+	}
+
+
+
+
+
 }

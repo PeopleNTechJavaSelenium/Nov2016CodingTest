@@ -1,5 +1,8 @@
 package problems;
 
+
+import java.util.*;
+
 /**
  * Created by mrahman on 4/9/16.
  */
@@ -12,6 +15,13 @@ public class DuplicateWord {
          */
 
         String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
+
+        List<String> list = Arrays.asList(st.split(" "));
+
+        Set<String> uniqueWords = new HashSet<String>(list);
+        for (String word : uniqueWords) {
+            System.out.println(word + ": " + Collections.frequency(list, word));
+        }
 
     }
 

@@ -1,5 +1,10 @@
 package reader;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class DataReader {
 
 	public static void main(String[] args) {
@@ -12,9 +17,42 @@ public class DataReader {
 		 *
 		 */
 
-		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		//String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		FileReader fr = null;
+		BufferedReader br = null;
+		String path1 ="C:\\Users\\Jubar\\IdeaProjects\\Nov2016CodingTest\\src\\data\\self-driving-car.txt";
 
-	
+		try {
+			fr = new FileReader(path1);
+
+		} catch (FileNotFoundException e) {
+			System.out.println("Fix your Path");
+		}
+		br = new BufferedReader(fr);
+		String text = "";
+		try {
+			while ((text= br.readLine())!=null){
+				System.out.println(text);
+			}
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if (br != null){
+					br = null;
+				}
+				if (fr !=null){
+					fr = null;
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+
+
+
 	}
 
 }

@@ -4,6 +4,14 @@ package math;
  * Created by mrahman on 12/16/16.
  */
 public class Factorial {
+    public static int fact (int number){
+        if (number == 0){
+            return 1;
+        }
+        return number * fact(number -1);
+
+
+    }
 
     public static void main(String[] args) {
         /*
@@ -12,5 +20,6 @@ public class Factorial {
          *
          */
 
+        System.out.println(fact(5));
     }
 }

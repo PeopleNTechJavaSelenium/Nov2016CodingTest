@@ -14,6 +14,17 @@ public class CnnEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
+
+		EmployeeInfo eIfo = new EmployeeInfo();
+		eIfo.employeeName();
+		eIfo.employeeId();
+		eIfo.assignDepartment();
+		eIfo.bonus(50000,10);
+		eIfo.CEO();
+		eIfo.numberOfEmployees();
+		eIfo.benefitLayout();
+
+
 		
 
 
