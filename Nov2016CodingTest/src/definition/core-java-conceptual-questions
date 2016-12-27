@@ -1,0 +1,166 @@
+Please answer the below core-java Questions:
+
+
+What jdk contains or composed of and define each components?
+What is IDE?
+What are the IDEs available in the market to support java?
+Explain the entire java life cycle.
+what is class?
+What is object?
+What is the entry point of an application?
+Why main is static?
+What is the difference between an Interface and Abstract class?
+Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+what is Access Specifier?
+What is OOP ? Define each feature of java OOP.
+What is API? Name list of API that you have used so far.
+Does java support multiple inheritance?
+What is method overloading and when it happens?
+What is method overriding and when it happens?
+Explain exceptions in java and how to handle it.
+What is static keyword in java? How it has been used in variables and methods ?
+What is final and how it has been used variables and methods?
+What is final, finally and finalize?
+What is a constructor ?
+What is "this" keyword in java ?
+What is "super" keyword in java?
+What is JVM stand for ?
+What version of java are you using?
+What is JAR stand for ?
+What is compile time and run time?
+What is heap?
+How java manage it's memory?
+What is the difference between String, StringBuffer and StringBuilder?
+
+
+Answers:
+
+What jdk contains or composed of and define each component?
+-JDK composed of following:
+The JDK is a superset of the JRE, and contains everything that is in the JRE, plus tools such as the compilers and debuggers necessary for developing applets and applications.
+What is IDE?
+-is a software application that provides comprehensive facilities to computer programmers for software development.
+ An IDE normally consists of a source code editor, build automation tools and a debugger.
+ Most modern IDEs have intelligent code completion.
+
+What are the IDEs available in the market to support java?
+-Eclipse, Intellij, Netbeans etc
+
+Explain the entire java life cycle.
+-Txt/Code Editor> Java source File > Java compiler > Bitecode file(.class) >class loader>bitecode verifier>interpreter> Operating System
+                                                           (Java          virtual       Machine       (JVM)     )
+what is class?
+-A class is nothing but a blueprint or a template for creating different objects which defines its properties and behaviors. Java class objects exhibit the properties and behaviors defined by its class. A class can contain fields and methods to describe the behavior of an object.
+
+What is object?
+-Object - Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behaviors
+-wagging, barking, eating. An object is an instance of a class.
+
+What is the entry point of an application? In a word its Main Method
+-The java tool launches a Java application. It does this by starting a Java runtime environment, loading a specified class, and invoking that class's main method. The method must be declared public and static, it must not return any value, and it must accept a String array as a parameter.
+
+Why main is static?
+-Static keyword allows main() to be called before an object of the class has been created.
+-This is necessary because main() is called by the JVM before any objects are made. Since it is static so directly invoked from class.
+
+
+What is the difference between an Interface and Abstract class?
+-Main difference is methods of a Java interface are implicitly abstract and cannot have implementations.
+A Java abstract class can have instance methods that implements a default behavior. 2.Variables declared in a
+Java interface is by default final. An abstract class may contain non-final variables
+
+Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+-NO, we can't create object out of an interface or Abstract class because
+
+Main intention of creating an object is to utilize the wrapped methods and data. As interface don't have any concrete
+implementation hence we cannot. For abstract class we may have concrete method or abstract method or both. There is no
+way for the API developer to restrict the use of the method that’s don't have implementation.
+
+what is Access Specifier?
+Classes, fields, methods can be default (no declaration of specifier) accessed. By using default specifier, we can access
+class, method, or field which belongs to same package, but not from outside this package. In Java there is no
+Access Specifiers. In Java sun Microsoft give Modifiers.
+
+What is OOP? Define each feature of java OOP.
+-Object-oriented programming (OOP) is a programming language model organized around objects rather than "actions" and data rather than logic. Historically, a program has been viewed as a logical procedure that takes input data, processes it, and produces output data.
+Because you can't code anything in Java without declaring classes and objects. Even the small "Hello World" declares a
+class: class HelloWorldApp { public static void main(String[] args) { System.out.println("Hello World!");
+Display the string. } } In C++ we can still use structured programming without classes to build applications
+
+What is API? Name list of API that you have used so far.
+-API (application program interface) is a set of routines, protocols, and tools for building software applications.
+The API specifies how software components should interact and APIs are used when programming graphical user interface (GUI) components. Eclipse, IntelliJ
+
+
+Does java support multiple inheritance?
+-JAVA doesn't support it. It is just to remove ambiguity, while C++ , Common lisp and few other languages supports multiple inheritance-  because multiple inheritance can cause ambiguity in few scenarios. One of the most common scenario is Diamond problem.
+
+What is method overloading and when it happens
+-Method Overloading is a feature that allows a class to have two or more methods having same name, if their argument lists are different.
+
+What is method overriding and when it happens?
+-In java, a method can only be written in Subclass, not in same class. The argument list should be exactly the same as that of the overridden method. The return type should be the same or a subtype of the return type declared in the original overridden method in the super
+
+Explain exceptions in java and how to handle it.
+-Exception is an abnormal condition. In java, exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.
+Exception handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or exceptional conditions requiring special processing – often changing the normal flow of program execution. It is provided by specialized programming language constructs or computer hardware mechanisms.
+
+
+What is static keyword in java? How it has been used in variables and methods ?
+-The static keyword in Java means that the variable or function is shared between all instances of that class as it belongs to the type, not the actual objects themselves. So if you have a variable: private static int i = 0; and you increment it ( i++ ) in one instance, the change will be reflected in all instances.
+
+What is final and how it has been used variables and methods?
+-The final keyword in java is used to restrict the user. The java final keyword can be used in many context. Final can be:
+-variable
+-method
+-class
+
+What is final, finally and finalize?
+- The final: keyword in java is used to restrict the user. The java final keyword can be used in many context. Final can be:
+-variable
+-method
+-class
+The finally block: always executes when the try block exits. This ensures that the finally block is executed even if an unexpected exception occurs. But finally is useful for more than just exception handling — it allows the programmer to avoid having cleanup code accidentally bypassed by a return, continue, or break. Putting cleanup code in a  finally block is always a good practice, even when no exceptions are anticipated.
+Finalize: The java.lang.Object.finalize() is called by the garbage collector on an object when garbage collection determines that there are no more references to the object. A subclass overrides the finalize method to dispose of system resources or to perform other cleanup.
+
+What is a constructor?
+-Constructor in java is a special type of method that is used to initialize the object.
+Java constructor is invoked at the time of object creation. It constructs the values i.e. provides data for the object
+that is why it is known as constructor.
+
+What is "this" keyword in java ?
+-THIS  is a keyword in Java. Which can be used inside method or constructor of class. It(this) works as a reference to
+current object whose method or constructor is being invoked. this keyword can be used to refer any member of current
+object from within an instance method or a constructor.
+
+What is "super" keyword in java?
+-Super Specify Super Class in inheritance
+
+What is JVM stand for ?
+-JAVA Virtual Machine
+
+What version of java are you using?
+-jdk1.8.0_111
+
+What is JAR stand for ?
+-JAR stands for Java Archive, is a package file format typically used to aggregate many Java class files and associated metadata and resources (text, images, etc.) into one file to distribute application software or libraries on the Java platform.
+
+What is compile time and run time?
+-The source code must be compiled into machine code in order to become and executable program. This compilation process is referred to as compile time. A compiled program can be opened and run by a user. When an application is running, it is called runtime.
+
+What is heap?
+-The JVM has a heap that is the runtime data area from which memory for all class instances and arrays are allocated. It is created at the JVM start-up. The heap size may be configured with the following VM options: -Xmx<size> - to set the maximum Java heap size.
+
+How java manage it's memory?
+-JAVA objects reside in an area called the heap. The heap is created when the JVM starts up and may increase or decrease in size while the application runs. When the heap becomes full, garbage is collected. During the garbage collection objects that are no longer used are cleared, thus making space for new objects. The JVM uses more memory than just the heap. For example, Java methods, thread stacks and native handles are allocated in memory separate from the heap,  as well as JVM internal data structures. The heap is sometimes divided into two areas (or generations) called the  nursery (or young space) and the old space. The nursery is a part of the heap reserved for allocation of new objects.
+ -When the nursery becomes full, garbage is collected by running a special young collection, where all objects that have   lived long enough in the nursery are promoted (moved) to the old space, thus freeing up the nursery for more object   allocation. When the old space becomes full garbage is collected there, a process called an old collection. The   reasoning behind a nursery is that most objects are temporary and short lived. A young collection is designed to be   swift at finding newly allocated objects that are still alive and moving them away from the nursery. Typically, a   young collection frees a given amount of memory much faster than an old collection or a garbage collection of a   single-generational heap (a heap without a nursery).
+
+What is the difference between String, StringBuffer and StringBuilder?
+---------------------------------------------------------------------------------
+                                        String                    StringBuffer         StringBuilder
+----------------------------------------------------------------------------------
+Storage Area |       Constant String Pool           Heap                       Heap
+Modifiable     |         No (immutable)            Yes( mutable )          Yes( mutable )
+Thread Safe   |           Yes                  Yes                          No
+ Performance |         Fast                  Very slow                 Fast
+-----------------------------------------------------------------------------------
