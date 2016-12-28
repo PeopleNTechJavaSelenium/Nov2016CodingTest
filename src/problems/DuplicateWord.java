@@ -16,7 +16,7 @@ public class DuplicateWord {
         duplicate(st);
     }
     public static void duplicate(String sentence){
-        String[] words = sentence.split(" ");
+        String[] words = sentence.toLowerCase().replace(".","").split(" ");
         int[] wordcount = new int[words.length];
         int totalLenDup = 0;
         int duplicates = 0;
