@@ -1,6 +1,8 @@
 package design;
 
 import databases.ConnectDB;
+import databases.ConnectDB_new;
+
 
 public class CnnEmployee {
 
@@ -17,30 +19,35 @@ public class CnnEmployee {
 	 **/
 	public static void main(String[] args) {
 
-		Employee emp = new EmployeeInfo("CNN", 101);
-		emp.employeeId(101);
-		emp.employeeName("Jerry");
-		emp.assignDepartment("IT");
-		emp.calculateSalary(90000);
-		emp.benefitLayout("Yes");
+        Employee emp = new EmployeeInfo("CNN", 101);
+        emp.employeeId(101);
+        emp.employeeName("Jerry");
+        emp.assignDepartment("IT");
+        emp.calculateSalary(90000);
+        emp.benefitLayout("Yes");
 
 
-		EmployeeDetails empdetails = new EmployeeInfo(102);
-		empdetails.employeeStatus("Yes");
+        EmployeeDetails empdetails = new EmployeeInfo(102);
+        empdetails.employeeStatus("Yes");
 
 
-		EmployeeInfo.calculateEmployeBonus(95000, 5 );
-		EmployeeInfo.calculateEmployePension(2, 95000, 10 );
-
-	}
+        EmployeeInfo.calculateEmployeBonus(95000, 5);
+        EmployeeInfo.calculateEmployePension(2, 95000, 10);
 
 
-	//Database connection
+        //Database connection
+
+       // ConnectDB connectDB = new ConnectDB();
+        //connectDB.InsertDataFromStringToMySql("create table employee_salma",  "values(empID varchar(3), empName varchar (20), Dept varchar(20)");
+
+        ConnectDB_new connectdb_new = new ConnectDB_new();
+
+        connectdb_new.dropDatabaseMySql("drop table employee_salma");
+        connectdb_new.createTableInSelectedDatabase("create table employee_salma(empID varchar(3), Name varchar (20), Dept varchar(20), salary varchar(20))");
+        connectdb_new.insertTwoRecordsAtOnce("insert into employee_salma values (101, 'Jerry', 'IT', 85000)",  "insert into employee_salma values(102, 'Lisa', 'Accounting', 90000)");
+        connectdb_new.retrieveDataFromTable("select * from employee_salma");
 
 
-
-
-
-
+    }
 
 }

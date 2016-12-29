@@ -61,13 +61,13 @@ public class EmployeeInfo extends EmployeeDetails {
 
 
 		if(bonus ==10)
-			total = (salary * bonus / 100)+ salary;
+			total = (salary * bonus) / 100;
 
 		else if(bonus == 8)
-		total = (salary * bonus) /100 + salary;
+		total = (salary * bonus) /100 ;
 
 		else if (bonus == 5)
-			total = (salary * bonus /100) + salary;
+			total = (salary * bonus)/100;
 
 		else
 			System.out.println("The employee do not get any bonus");
@@ -90,13 +90,13 @@ public class EmployeeInfo extends EmployeeDetails {
 		int total = 0;
 
 		if(year ==1)
-			total = (salary * bonus/100) + salary;
+			total = (salary * bonus/100) ;
 
 		else if(year == 2)
-			total = (salary * bonus /100) + salary;
+			total = (salary * bonus /100);
 
 		else if(year == 5)
-			total = (salary * bonus /100) + salary;
+			total = (salary * bonus /100);
 		else
 			System.out.println("The employee do not get any pension");
 
