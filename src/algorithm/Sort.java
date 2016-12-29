@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.util.Arrays;
+
 public class Sort {
 
     long executionTime = 0;
@@ -34,6 +36,22 @@ public class Sort {
         final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
+        int i;
+        int itemSorted;
+
+        for (i = 1; i < list.length; i++) {
+            itemSorted = list[i];
+            int j;
+            for (j = i - 1; j >= 0 && list[j] > itemSorted; j--) {
+                list[j + 1] = list[j];
+            }
+            list[j + 1] = itemSorted;
+        }
+
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
+        return list;
 
 
 
@@ -46,66 +64,204 @@ public class Sort {
     public int[] bubbleSort(int [] array){
         int [] list = array;
         //implement here
-        
-        
-        
-        
-        
-        
+        int i;
+        int j;
+        int temp=0;
+
+        for (i=0; i < list.length -1; i++){
+            for (j=0; j < list.length -1-i; j++ ){
+                if (list[j] > list[j +1]){
+                    temp=list[j];
+                    list[j] = list[j+1];
+                    list[j+1]=temp;
+                }
+            }
+        }
         return list;
     }
-    
+
 
     public int [] mergeSort(int [] array){
+        final long startTime = System.currentTimeMillis();
+
+
         int [] list = array;
         //implement here
-        
-        
+        int[] workSpace = new int[array.length];
+        int temp = 0;
+        recMergeSort(list, workSpace, 0, array.length - 1);
+
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
+
 
         return list;
     }
-    
+
+    private void recMergeSort(int[] list, int[] workSpace, int i, int i1) {
+    }
+
 
     public int [] quickSort(int [] array){
         int [] list = array;
         //implement here
-        
-        
+        final long startTime = System.currentTimeMillis();
 
+        int[] workSpace = new int[array.length];
+
+        quickSort(list, 0, array.length - 1);
+
+        final long endTime = System.currentTimeMillis();
+        final long executionTime = endTime - startTime;
+        this.executionTime = executionTime;
         return list;
+
+
     }
-    
+
     public int [] heapSort(int [] array){
-        int [] list = array;
+        // int [] list = array;
         //implement here
-        
-        
+        private static int[] a;
+        private static int n;
+        private static int left;
+        private static int right;
+        private static int largest;
 
-        return list;
+
+    public static void buildheap(int []a) {
+        n = a.length-1;
+        for(int i=n/2; i>=0; i--){
+            maxheap(a,i);
+        }
     }
+
+    public static void maxheap(int[] a, int i) {
+        left = 2*i;
+        right = 2*i+1;
+
+        if(left <= n && a[left] > a[i]){
+            largest=left;
+        } else {
+            largest=i;
+        }
+
+        if(right <= n && a[right] > a[largest]) {
+            largest=right;
+        }
+        if(largest!=i) {
+            exchange(i, largest);
+            maxheap(a, largest);
+        }
+    }
+
+    public static void exchange(int i, int j) {
+        int t = a[i];
+        a[i] = a[j];
+        a[j] = t;
+    }
+
+    public static void sort(int[] myarray) {
+        a = myarray;
+        buildheap(a);
+        for(int i=n; i>0; i--) {
+            exchange(0, i);
+            n=n-1;
+            maxheap(a, 0);
+        }
+    }
+
+    public static void main(String[] args) {
+        int []numbers={55,2,93,1,23,10,66,12,7,54,3};
+        System.out.println(Arrays.toString(numbers));
+        sort(numbers);
+        System.out.println(Arrays.toString(numbers));
+    }
+
+
+
+
 
 
     public int [] bucketSort(int [] array){
-        int [] list = array;
+        //int [] list = array;
         //implement here
-        
-        
+        public static void sort(int[] a, int maxVal) {
+            int [] bucket=new int[maxVal+1];
 
-        return list;
+            for (int i=0; i<bucket.length; i++) {
+                bucket[i]=0;
+            }
+
+            for (int i=0; i<a.length; i++) {
+                bucket[a[i]]++;
+            }
+
+            int outPos=0;
+            for (int i=0; i<bucket.length; i++) {
+                for (int j=0; j<bucket[i]; j++) {
+                    a[outPos++]=i;
+                }
+            }
+        }
+
+
+    public static void main(String[] args) {
+        int maxVal=5;
+        int [] data= {5,3,0,2,4,1,0,5,2,3,1,4};
+
+        System.out.println("Before: " + Arrays.toString(data));
+        sort(data,maxVal);
+        System.out.println("After:  " + Arrays.toString(data));
     }
-    
+
+
+
+}
+
     public int [] shellSort(int [] array){
         int [] list = array;
         //implement here
-        
-        
+    public static void sort(int[] array) {
+        int inner, outer;
+        int temp;
 
-        return list;
-    }
+        int h = 1;
+        while (h <= array.length / 3) {
+            h = h * 3 + 1;
+        }
+        while (h > 0) {
+            for (outer = h; outer < array.length; outer++) {
+                temp = array[outer];
+                inner = outer;
 
-    public static void printSortedArray(int [] array){
-        for(int i=0; i<array.length; i++){
-            System.out.println(array[i]);
+                while (inner > h - 1 && array[inner - h] >= temp) {
+                    array[inner] = array[inner - h];
+                    inner -= h;
+                }
+                array[inner] = temp;
+            }
+            h = (h - 1) / 3;
         }
     }
-}
+
+    public static void main(String[] args) {
+
+        int [] array = {5,3,0,2,4,1,0,5,2,3,1,4};
+        System.out.println("Before: " + Arrays.toString(array));
+        sort(array);
+        System.out.println("After:  " + Arrays.toString(array));
+
+    }
+
+
+        return list;
+                }
+
+public static void printSortedArray(int [] array){
+        for(int i=0; i<array.length; i++){
+        System.out.println(array[i]);
+        }
+        }
+        }
