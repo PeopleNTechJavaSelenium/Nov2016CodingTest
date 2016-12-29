@@ -13,11 +13,11 @@ public class UseQueue {
 		 *
 		 */
 		Queue<String> qList = new LinkedList<String>();
-		qList.add("Naruto"); // Add
-		qList.add("Sasuke");
-		qList.add("Natsu");
+		qList.add("James"); // Add
+		qList.add("Lars");
+		qList.add("Lemmy");
 
-		System.out.println("This is the peek: " + qList.peek()); // Peek
+		System.out.println("Peek: " + qList.peek()); // Peek
 		qList.remove(1); // Remove
 
 

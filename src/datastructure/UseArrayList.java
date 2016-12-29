@@ -4,32 +4,28 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Created by abra on 12/28/16.
+ */
 public class UseArrayList {
 
 	public static void main(String[] args) {
-		/*
-		 * Demonstrate how to use ArrayList that includes add,peek,remove,retrieve elements.
-		 * Use For Each loop and while loop with Iterator to retrieve data.
-		 * Store all the sorted data into one of the databases.
-		 *
-		 */
 
-		List<String> myList = new ArrayList<String>();
-		myList.add("Pizza");
-		myList.add("Rice");
-		myList.add("Chicken");
+		List<String> List = new ArrayList<String>();
+		List.add("Pizza");
+		List.add("Rice");
+		List.add("Chicken");
 
-		//for(String Food: myList){
-		//	System.out.println(Food);
-		//}
+		System.out.println("Using for each loop:");
+		for(String Food: List){
+			System.out.println(Food);
+		}
 
-		//Iterator itr = new myList.iterator();
-		//while (itr.hasNext()){
-		//	System.out.println(itr.next());
+		System.out.println("Using iterator:");
+		Iterator it = List.iterator();
+		while (it.hasNext()){
+			System.out.println(it.next());
+		}
+
 	}
-
-
-
-
-
 }

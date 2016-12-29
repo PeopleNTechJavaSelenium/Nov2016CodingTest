@@ -16,8 +16,8 @@ public class UseMap {
 		 */
 
 		Map<String, String> mList = new LinkedHashMap<String, String >();
-		mList.put("Honda", "Civic");
-		mList.put("BMW", "M6");
+		mList.put("Honda", "Accord");
+		mList.put("Lamborgini", "Marcelago");
 		mList.put("Audi", "R8");
 
 		for (Map.Entry map :mList.entrySet()) {

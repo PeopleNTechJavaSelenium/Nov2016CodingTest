@@ -13,11 +13,11 @@ public class UseStack {
 		 */
 
 		Stack<Object> sList = new Stack<Object>();
-		sList.push("Jon Snow");// push
-		sList.push("Daenerys Targaryen");
-		sList.push("Tyrion Lannister");
+		sList.push("John");// push
+		sList.push("Nick");
+		sList.push("James");
 		System.out.println("Peek: " + sList.peek() );// Peek
-		System.out.println("Searching 'Jon Snow' in stack: "+ sList.search("Jon Snow"));// Search
+		System.out.println("Searching 'John' in stack: "+ sList.search("John"));// Search
 
 		Iterator it = sList.listIterator();
 		while(it.hasNext()) {

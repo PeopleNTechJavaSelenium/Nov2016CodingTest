@@ -13,8 +13,8 @@ public class UseLinkedList {
 		 */
 		LinkedList<String> lList = new LinkedList<String>();
 		lList.add("Honda");
-		lList.add("BMW");
-		lList.add("Jaguar");
+		lList.add("Toyota");
+		lList.add("Infiniti");
 
 		Iterator it = lList.iterator();
 		while (it.hasNext()){
@@ -22,11 +22,11 @@ public class UseLinkedList {
 		}
 
 		lList.addFirst("Tesla");
-		lList.addLast("Audi");
+		lList.addLast("Hyundai");
 		lList.removeLast();
 		lList.removeFirst();
 		lList.remove(2);
-		System.out.println("This is the peek" + lList.peek());
+		System.out.println("Peek" + lList.peek());
 
 
 	}
