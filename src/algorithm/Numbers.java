@@ -1,4 +1,5 @@
 package algorithm;
+import java.lang.reflect.Array;
 import java.util.Random;
 
 /*
@@ -14,14 +15,14 @@ public class Numbers {
 	 */
 
 	public static void main(String[] args) {
-		
-		int [] num = new int[10000];
-		
+
+		int[] num = new int[10000];
+
 		Random rand = new Random();
-		for(int i=0; i<num.length; i++){
-			
-		num[i] = rand.nextInt(1000000);
-			
+		for (int i = 0; i < num.length; i++) {
+
+			num[i] = rand.nextInt(1000000);
+
 		}
 
 		//Selection Sort
@@ -35,7 +36,6 @@ public class Numbers {
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
 
-		//Continue for rest of the Sorting Algorithm....
 
 	}
 

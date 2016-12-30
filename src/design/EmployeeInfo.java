@@ -1,6 +1,6 @@
 package design;
 
-public class EmployeeInfo{
+public class EmployeeInfo extends AbstractEmpl {
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -29,6 +29,7 @@ public class EmployeeInfo{
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
+
 		
 	}
     public EmployeeInfo(String name, int employeeId){
@@ -43,7 +44,7 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeBonus(){
+	public static int calculateEmployeeBonus(){
 		int total=0;
 		return total;
 	}
@@ -55,8 +56,17 @@ public class EmployeeInfo{
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployePension(){
-		int total=0;
-		return total;
+	public static int calculateEmployeePension(){
+		int totalPension=0;
+
+		int numberOfYears = 0;
+		int salary = 0;
+		int x;
+
+		x = salary%numberOfYears;
+
+		totalPension = (x/100)*salary;
+
+		return totalPension;
 	}
 }

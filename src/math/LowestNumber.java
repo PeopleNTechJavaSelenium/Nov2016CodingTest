@@ -12,24 +12,30 @@ public class LowestNumber {
 		 * Write java solution to find the lowest number from this array.
 		 * Use one of the databases from mysql or mongodb to store and to retrieve.
 		 */
-		int  array[] = new int[]{211,110,99,34,67,89,67,456,321,456,78,90,45,32,56,78,90,54,32,123,67,5,679,54,32,65};
+		int array[] = new int[]{211, 110, 99, 34, 67, 89, 67, 456, 321, 456, 78, 90, 45, 32, 56, 78, 90, 54, 32, 123, 67, 5, 679, 54, 32, 65};
+
 
 		ConnectDB connectDB = new ConnectDB();
 
-		List<String> lowestValue = new ArrayList<String>();
-		try {
-			connectDB.InsertDataFromArryToMySql(array, "tbl_lowestNumber", "column_lowestNumber");
-			lowestValue = connectDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
 
-		} catch (Exception e) {
-			e.printStackTrace();
+		int minNum = findMin(array);
+
+		connectDB.InsertDataFromStringToMySql(Integer.toString(minNum), "MathLowestNumber", "List");
+
+		System.out.println("Lowest Number in Array: " + minNum + "\nExported to DB:core_java Table:MathLowestNumber");
+
+
+	}
+
+
+	public static int findMin(int[] Arr){
+		int min =Arr[0];
+		for(int i=0;i<Arr.length;i++){
+			if(Arr[i]<min){
+				min = Arr[i];
+			}
 		}
-		System.out.println("Data is reading from the Table (tbl_primenumber) and displaying to the console");
-		for(String st:lowestValue){
-			System.out.println(st);
-		}
-
-
+		return min;
 
 
 

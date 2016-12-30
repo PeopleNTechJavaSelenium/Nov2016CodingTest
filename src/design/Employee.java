@@ -22,6 +22,9 @@ public interface Employee {
 	
 	//employee benefit
 	public void benefitLayout();
+
+	//SSN
+	public int SSN();
 	
 	
 
